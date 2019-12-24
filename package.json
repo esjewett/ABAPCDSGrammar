@@ -4,7 +4,7 @@
   "description": "Analysis for ABAP CDS",
   "main": "index.js",
   "scripts": {
-    "test": "npm run antlr4ts; tsc -p /Users/ethanjewett/GitRepos/abapcdsanalyzer/tsconfig.json; node dist/index.js",
+    "test": "npm run antlr4ts; tsc -p ./tsconfig.json; node dist/index.js",
     "antlr4ts": "antlr4ts -visitor ./ABAPCDS.g4"
   },
   "author": "",
