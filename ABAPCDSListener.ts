@@ -1,0 +1,397 @@
+// Generated from ./ABAPCDS.g4 by ANTLR 4.7.3-SNAPSHOT
+
+
+import { ParseTreeListener } from "antlr4ts/tree/ParseTreeListener";
+
+import { StatementContext } from "./ABAPCDSParser";
+import { AliasContext } from "./ABAPCDSParser";
+import { Data_sourceContext } from "./ABAPCDSParser";
+import { TargetContext } from "./ABAPCDSParser";
+import { Associated_viewContext } from "./ABAPCDSParser";
+import { Rel_exprContext } from "./ABAPCDSParser";
+import { Cond_exprContext } from "./ABAPCDSParser";
+import { Min_max_clauseContext } from "./ABAPCDSParser";
+import { AssociationContext } from "./ABAPCDSParser";
+import { Select_statementContext } from "./ABAPCDSParser";
+import { ViewContext } from "./ABAPCDSParser";
+import { CdsddlContext } from "./ABAPCDSParser";
+import { Annotation_valueContext } from "./ABAPCDSParser";
+import { AnnotationContext } from "./ABAPCDSParser";
+import { ParameterContext } from "./ABAPCDSParser";
+import { Session_variableContext } from "./ABAPCDSParser";
+import { Builtin_funcContext } from "./ABAPCDSParser";
+import { Character_literalContext } from "./ABAPCDSParser";
+import { Numeric_literalContext } from "./ABAPCDSParser";
+import { LiteralContext } from "./ABAPCDSParser";
+import { Case_resultContext } from "./ABAPCDSParser";
+import { Case_when_operandContext } from "./ABAPCDSParser";
+import { Case_operandContext } from "./ABAPCDSParser";
+import { When_clause_simpleContext } from "./ABAPCDSParser";
+import { Else_clauseContext } from "./ABAPCDSParser";
+import { Case_exprContext } from "./ABAPCDSParser";
+import { FieldContext } from "./ABAPCDSParser";
+import { Key_fieldContext } from "./ABAPCDSParser";
+import { Field_definitionContext } from "./ABAPCDSParser";
+import { Field_renameContext } from "./ABAPCDSParser";
+import { ElementContext } from "./ABAPCDSParser";
+import { Select_listContext } from "./ABAPCDSParser";
+
+
+/**
+ * This interface defines a complete listener for a parse tree produced by
+ * `ABAPCDSParser`.
+ */
+export interface ABAPCDSListener extends ParseTreeListener {
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.statement`.
+	 * @param ctx the parse tree
+	 */
+	enterStatement?: (ctx: StatementContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.statement`.
+	 * @param ctx the parse tree
+	 */
+	exitStatement?: (ctx: StatementContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.alias`.
+	 * @param ctx the parse tree
+	 */
+	enterAlias?: (ctx: AliasContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.alias`.
+	 * @param ctx the parse tree
+	 */
+	exitAlias?: (ctx: AliasContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.data_source`.
+	 * @param ctx the parse tree
+	 */
+	enterData_source?: (ctx: Data_sourceContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.data_source`.
+	 * @param ctx the parse tree
+	 */
+	exitData_source?: (ctx: Data_sourceContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.target`.
+	 * @param ctx the parse tree
+	 */
+	enterTarget?: (ctx: TargetContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.target`.
+	 * @param ctx the parse tree
+	 */
+	exitTarget?: (ctx: TargetContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.associated_view`.
+	 * @param ctx the parse tree
+	 */
+	enterAssociated_view?: (ctx: Associated_viewContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.associated_view`.
+	 * @param ctx the parse tree
+	 */
+	exitAssociated_view?: (ctx: Associated_viewContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.rel_expr`.
+	 * @param ctx the parse tree
+	 */
+	enterRel_expr?: (ctx: Rel_exprContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.rel_expr`.
+	 * @param ctx the parse tree
+	 */
+	exitRel_expr?: (ctx: Rel_exprContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.cond_expr`.
+	 * @param ctx the parse tree
+	 */
+	enterCond_expr?: (ctx: Cond_exprContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.cond_expr`.
+	 * @param ctx the parse tree
+	 */
+	exitCond_expr?: (ctx: Cond_exprContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.min_max_clause`.
+	 * @param ctx the parse tree
+	 */
+	enterMin_max_clause?: (ctx: Min_max_clauseContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.min_max_clause`.
+	 * @param ctx the parse tree
+	 */
+	exitMin_max_clause?: (ctx: Min_max_clauseContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.association`.
+	 * @param ctx the parse tree
+	 */
+	enterAssociation?: (ctx: AssociationContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.association`.
+	 * @param ctx the parse tree
+	 */
+	exitAssociation?: (ctx: AssociationContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.select_statement`.
+	 * @param ctx the parse tree
+	 */
+	enterSelect_statement?: (ctx: Select_statementContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.select_statement`.
+	 * @param ctx the parse tree
+	 */
+	exitSelect_statement?: (ctx: Select_statementContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.view`.
+	 * @param ctx the parse tree
+	 */
+	enterView?: (ctx: ViewContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.view`.
+	 * @param ctx the parse tree
+	 */
+	exitView?: (ctx: ViewContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.cdsddl`.
+	 * @param ctx the parse tree
+	 */
+	enterCdsddl?: (ctx: CdsddlContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.cdsddl`.
+	 * @param ctx the parse tree
+	 */
+	exitCdsddl?: (ctx: CdsddlContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.annotation_value`.
+	 * @param ctx the parse tree
+	 */
+	enterAnnotation_value?: (ctx: Annotation_valueContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.annotation_value`.
+	 * @param ctx the parse tree
+	 */
+	exitAnnotation_value?: (ctx: Annotation_valueContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.annotation`.
+	 * @param ctx the parse tree
+	 */
+	enterAnnotation?: (ctx: AnnotationContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.annotation`.
+	 * @param ctx the parse tree
+	 */
+	exitAnnotation?: (ctx: AnnotationContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.parameter`.
+	 * @param ctx the parse tree
+	 */
+	enterParameter?: (ctx: ParameterContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.parameter`.
+	 * @param ctx the parse tree
+	 */
+	exitParameter?: (ctx: ParameterContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.session_variable`.
+	 * @param ctx the parse tree
+	 */
+	enterSession_variable?: (ctx: Session_variableContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.session_variable`.
+	 * @param ctx the parse tree
+	 */
+	exitSession_variable?: (ctx: Session_variableContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.builtin_func`.
+	 * @param ctx the parse tree
+	 */
+	enterBuiltin_func?: (ctx: Builtin_funcContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.builtin_func`.
+	 * @param ctx the parse tree
+	 */
+	exitBuiltin_func?: (ctx: Builtin_funcContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.character_literal`.
+	 * @param ctx the parse tree
+	 */
+	enterCharacter_literal?: (ctx: Character_literalContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.character_literal`.
+	 * @param ctx the parse tree
+	 */
+	exitCharacter_literal?: (ctx: Character_literalContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.numeric_literal`.
+	 * @param ctx the parse tree
+	 */
+	enterNumeric_literal?: (ctx: Numeric_literalContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.numeric_literal`.
+	 * @param ctx the parse tree
+	 */
+	exitNumeric_literal?: (ctx: Numeric_literalContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.literal`.
+	 * @param ctx the parse tree
+	 */
+	enterLiteral?: (ctx: LiteralContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.literal`.
+	 * @param ctx the parse tree
+	 */
+	exitLiteral?: (ctx: LiteralContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.case_result`.
+	 * @param ctx the parse tree
+	 */
+	enterCase_result?: (ctx: Case_resultContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.case_result`.
+	 * @param ctx the parse tree
+	 */
+	exitCase_result?: (ctx: Case_resultContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.case_when_operand`.
+	 * @param ctx the parse tree
+	 */
+	enterCase_when_operand?: (ctx: Case_when_operandContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.case_when_operand`.
+	 * @param ctx the parse tree
+	 */
+	exitCase_when_operand?: (ctx: Case_when_operandContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.case_operand`.
+	 * @param ctx the parse tree
+	 */
+	enterCase_operand?: (ctx: Case_operandContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.case_operand`.
+	 * @param ctx the parse tree
+	 */
+	exitCase_operand?: (ctx: Case_operandContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.when_clause_simple`.
+	 * @param ctx the parse tree
+	 */
+	enterWhen_clause_simple?: (ctx: When_clause_simpleContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.when_clause_simple`.
+	 * @param ctx the parse tree
+	 */
+	exitWhen_clause_simple?: (ctx: When_clause_simpleContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.else_clause`.
+	 * @param ctx the parse tree
+	 */
+	enterElse_clause?: (ctx: Else_clauseContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.else_clause`.
+	 * @param ctx the parse tree
+	 */
+	exitElse_clause?: (ctx: Else_clauseContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.case_expr`.
+	 * @param ctx the parse tree
+	 */
+	enterCase_expr?: (ctx: Case_exprContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.case_expr`.
+	 * @param ctx the parse tree
+	 */
+	exitCase_expr?: (ctx: Case_exprContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.field`.
+	 * @param ctx the parse tree
+	 */
+	enterField?: (ctx: FieldContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.field`.
+	 * @param ctx the parse tree
+	 */
+	exitField?: (ctx: FieldContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.key_field`.
+	 * @param ctx the parse tree
+	 */
+	enterKey_field?: (ctx: Key_fieldContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.key_field`.
+	 * @param ctx the parse tree
+	 */
+	exitKey_field?: (ctx: Key_fieldContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.field_definition`.
+	 * @param ctx the parse tree
+	 */
+	enterField_definition?: (ctx: Field_definitionContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.field_definition`.
+	 * @param ctx the parse tree
+	 */
+	exitField_definition?: (ctx: Field_definitionContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.field_rename`.
+	 * @param ctx the parse tree
+	 */
+	enterField_rename?: (ctx: Field_renameContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.field_rename`.
+	 * @param ctx the parse tree
+	 */
+	exitField_rename?: (ctx: Field_renameContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.element`.
+	 * @param ctx the parse tree
+	 */
+	enterElement?: (ctx: ElementContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.element`.
+	 * @param ctx the parse tree
+	 */
+	exitElement?: (ctx: ElementContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.select_list`.
+	 * @param ctx the parse tree
+	 */
+	enterSelect_list?: (ctx: Select_listContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.select_list`.
+	 * @param ctx the parse tree
+	 */
+	exitSelect_list?: (ctx: Select_listContext) => void;
+}
+

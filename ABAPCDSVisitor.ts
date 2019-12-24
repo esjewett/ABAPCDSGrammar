@@ -1,0 +1,272 @@
+// Generated from ./ABAPCDS.g4 by ANTLR 4.7.3-SNAPSHOT
+
+
+import { ParseTreeVisitor } from "antlr4ts/tree/ParseTreeVisitor";
+
+import { StatementContext } from "./ABAPCDSParser";
+import { AliasContext } from "./ABAPCDSParser";
+import { Data_sourceContext } from "./ABAPCDSParser";
+import { TargetContext } from "./ABAPCDSParser";
+import { Associated_viewContext } from "./ABAPCDSParser";
+import { Rel_exprContext } from "./ABAPCDSParser";
+import { Cond_exprContext } from "./ABAPCDSParser";
+import { Min_max_clauseContext } from "./ABAPCDSParser";
+import { AssociationContext } from "./ABAPCDSParser";
+import { Select_statementContext } from "./ABAPCDSParser";
+import { ViewContext } from "./ABAPCDSParser";
+import { CdsddlContext } from "./ABAPCDSParser";
+import { Annotation_valueContext } from "./ABAPCDSParser";
+import { AnnotationContext } from "./ABAPCDSParser";
+import { ParameterContext } from "./ABAPCDSParser";
+import { Session_variableContext } from "./ABAPCDSParser";
+import { Builtin_funcContext } from "./ABAPCDSParser";
+import { Character_literalContext } from "./ABAPCDSParser";
+import { Numeric_literalContext } from "./ABAPCDSParser";
+import { LiteralContext } from "./ABAPCDSParser";
+import { Case_resultContext } from "./ABAPCDSParser";
+import { Case_when_operandContext } from "./ABAPCDSParser";
+import { Case_operandContext } from "./ABAPCDSParser";
+import { When_clause_simpleContext } from "./ABAPCDSParser";
+import { Else_clauseContext } from "./ABAPCDSParser";
+import { Case_exprContext } from "./ABAPCDSParser";
+import { FieldContext } from "./ABAPCDSParser";
+import { Key_fieldContext } from "./ABAPCDSParser";
+import { Field_definitionContext } from "./ABAPCDSParser";
+import { Field_renameContext } from "./ABAPCDSParser";
+import { ElementContext } from "./ABAPCDSParser";
+import { Select_listContext } from "./ABAPCDSParser";
+
+
+/**
+ * This interface defines a complete generic visitor for a parse tree produced
+ * by `ABAPCDSParser`.
+ *
+ * @param <Result> The return type of the visit operation. Use `void` for
+ * operations with no return type.
+ */
+export interface ABAPCDSVisitor<Result> extends ParseTreeVisitor<Result> {
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.statement`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitStatement?: (ctx: StatementContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.alias`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitAlias?: (ctx: AliasContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.data_source`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitData_source?: (ctx: Data_sourceContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.target`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitTarget?: (ctx: TargetContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.associated_view`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitAssociated_view?: (ctx: Associated_viewContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.rel_expr`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitRel_expr?: (ctx: Rel_exprContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.cond_expr`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitCond_expr?: (ctx: Cond_exprContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.min_max_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitMin_max_clause?: (ctx: Min_max_clauseContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.association`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitAssociation?: (ctx: AssociationContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.select_statement`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitSelect_statement?: (ctx: Select_statementContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.view`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitView?: (ctx: ViewContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.cdsddl`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitCdsddl?: (ctx: CdsddlContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.annotation_value`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitAnnotation_value?: (ctx: Annotation_valueContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.annotation`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitAnnotation?: (ctx: AnnotationContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.parameter`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitParameter?: (ctx: ParameterContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.session_variable`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitSession_variable?: (ctx: Session_variableContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.builtin_func`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitBuiltin_func?: (ctx: Builtin_funcContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.character_literal`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitCharacter_literal?: (ctx: Character_literalContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.numeric_literal`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitNumeric_literal?: (ctx: Numeric_literalContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.literal`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitLiteral?: (ctx: LiteralContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.case_result`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitCase_result?: (ctx: Case_resultContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.case_when_operand`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitCase_when_operand?: (ctx: Case_when_operandContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.case_operand`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitCase_operand?: (ctx: Case_operandContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.when_clause_simple`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitWhen_clause_simple?: (ctx: When_clause_simpleContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.else_clause`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitElse_clause?: (ctx: Else_clauseContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.case_expr`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitCase_expr?: (ctx: Case_exprContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.field`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitField?: (ctx: FieldContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.key_field`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitKey_field?: (ctx: Key_fieldContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.field_definition`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitField_definition?: (ctx: Field_definitionContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.field_rename`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitField_rename?: (ctx: Field_renameContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.element`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitElement?: (ctx: ElementContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.select_list`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitSelect_list?: (ctx: Select_listContext) => Result;
+}
+
