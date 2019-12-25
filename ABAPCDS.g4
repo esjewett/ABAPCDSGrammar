@@ -1,4 +1,24 @@
 grammar ABAPCDS;
+
+// Todo:
+//  - Comments
+//  - Parameter lists - https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abencds_f1_parameter_list.htm
+//  - name_list variant of SELECT
+//  - $EXTENSION
+//  - Path expressions (currently we have a very partial implementation)
+//  - Built-in/pre-defined functions
+//  - Relational expressions
+//  - Aggregate expressions
+//  - Arithmatic expressions
+//  - Cast expressions
+//  - Full annotation enum definitions
+//  - Joins
+//  - Enhancements - https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abencds_f1_extend_view.htm
+//  - Metadata extensions
+//  - DCL
+//  - Table functions
+//  - WHERE/HAVING/GROUP BY/UNION clauses - https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abencds_select_clauses.htm
+
 WS  
     :   [ \t\r\n]+ -> skip
     ;
