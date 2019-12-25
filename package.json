@@ -1,7 +1,7 @@
 {
-  "name": "abapcdsanalyzer",
+  "name": "abapcdsgrammar",
   "version": "0.0.1",
-  "description": "Analysis for ABAP CDS",
+  "description": "Grammar for ABAP CDS",
   "main": "index.js",
   "scripts": {
     "test": "npm run antlr4ts; tsc -p ./tsconfig.json; node dist/index.js",
