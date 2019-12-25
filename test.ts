@@ -27,9 +27,9 @@ export function processText(source: string = '') {
   const parser = new ABAPCDSParser(tokenStream);
   const tree = parser.cdsddl();
   const printer = new CDSDDLListener(parser);
-  ParseTreeWalker.DEFAULT.walk(printer as ParseTreeListener, tree);
+  // ParseTreeWalker.DEFAULT.walk(printer as ParseTreeListener, tree);
   return tree;
 }
 
 processFile('./examples/#mindset#i_error_log.ddls.asddls');
-//processFile('./examples/#mindset#c_error_log.ddls.asddls');
+processFile('./examples/#mindset#c_error_log.ddls.asddls');
