@@ -7,6 +7,11 @@
 
 @OData.publish: true
 
+/*
+  Multi-line comment
+
+*/
+
 define view /MINDSET/C_ERROR_LOG
   as select from /MINDSET/I_ERROR_LOG
 {
@@ -17,7 +22,7 @@ define view /MINDSET/C_ERROR_LOG
       UserName,
   
   
-      TimeStamp,
+      TimeStamp, // End of line comment 
       ErrorDate,
       DATS_DAYS_BETWEEN(ErrorDate, CurrentDate) as DaysAgo,
       @DefaultAggregation: #SUM
@@ -55,7 +60,7 @@ define view /MINDSET/C_ERROR_LOG
       @DefaultAggregation: #SUM
       ContextSize,
       @DefaultAggregation: #SUM
-      CallStackSize,
+      /* Inline comment */ CallStackSize,
       @DefaultAggregation: #SUM
       RequestSize,
       @DefaultAggregation: #SUM
