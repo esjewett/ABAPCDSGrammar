@@ -72,7 +72,7 @@ export function processText(source: string = '') {
   const parser = new ABAPCDSParser(tokenStream);
   const tree = parser.cdsddl();
   const printer = new CDSDDLListener(parser);
-  // ParseTreeWalker.DEFAULT.walk(printer as ParseTreeListener, tree);
+  //ParseTreeWalker.DEFAULT.walk(printer as ParseTreeListener, tree);
   return tree;
 }
 

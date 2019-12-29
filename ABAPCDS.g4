@@ -46,6 +46,8 @@ ON:                 'ON' | 'on';
 NOT:                'NOT' | 'not';
 AND:                'AND' | 'and';
 OR:                 'OR' | 'or';
+SINGLELINECOMMENT:  '//' ~[\r\n]* -> skip;
+MULTILINECOMMENT:   '/*' .*? '*/' -> skip;
 
 NUMBER
    : '-'? INT ('.' [0-9] +)?
