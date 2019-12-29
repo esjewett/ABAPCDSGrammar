@@ -1,0 +1,1 @@
+Files in this folder are from https://github.com/stockbal/abap-search-tools and are licensed under the LICENSE file included in this folder.

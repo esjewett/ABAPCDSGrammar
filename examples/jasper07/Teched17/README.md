@@ -1,0 +1,1 @@
+Files in this folder come from https://github.com/jasper07/Teched17 and are licensed by the LICENSE file in this folder.

@@ -1,0 +1,1 @@
+Files in this folder are from https://github.com/MDJoerg/MQBA and are licensed under the LICENSE file included in this folder.
