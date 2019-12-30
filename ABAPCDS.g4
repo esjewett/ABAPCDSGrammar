@@ -1,8 +1,6 @@
 grammar ABAPCDS;
 
 // Todo:
-//  - Comments
-//  - Parameter lists - https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abencds_f1_parameter_list.htm
 //  - name_list variant of SELECT
 //  - $EXTENSION
 //  - Path expressions (currently we have a very partial implementation)
@@ -39,6 +37,7 @@ END:                'END' | 'end';
 DISTINCT:           'DISTINCT' | 'distinct';
 TO:                 'TO' | 'to';
 WITH:               'WITH' | 'with';
+PARAMETERS:         'PARAMETERS' | 'parameters';
 DEFAULT:            'DEFAULT' | 'default';
 FILTER:             'FILTER' | 'filter';
 ASSOCIATION:        'ASSOCIATION' | 'association';
@@ -52,6 +51,14 @@ MULTILINECOMMENT:   '/*' .*? '*/' -> skip;
 NUMBER
    : '-'? INT ('.' [0-9] +)?
    ;
+
+LEN
+    : INT
+    ;
+
+DEC
+    : INT
+    ;
 
 fragment INT
    : '0' | [1-9] [0-9]*
@@ -121,8 +128,54 @@ select_statement
         | ( FROM data_source association* '{' select_list '}')) /*clauses*/
     ;
 
+parameter_annotation
+    : annotation_value
+    ;
+
+parameter_name
+    : IDENTIFIER
+    ;
+
+dtype
+    : 'abap.char(' LEN ')'
+    | 'abap.clnt' '(3)'?
+    | 'abap.cuky(5)'
+    | 'abap.curr(' LEN ',' DEC ')'
+    | 'abap.dats' '(8)'?
+    | 'abap.dec(' LEN ',' DEC ')'
+    | 'abap.fltp' '(16,16)'?
+    | 'abap.int1' '(3)'?
+    | 'abap.int2' '(5)'?
+    | 'abap.int4' '(10)'?
+    | 'abap.int8' '(19)'?
+    | 'abap.lang' '(1)'?
+    | 'abap.numc(' LEN ')'
+    | 'abap.quan(' LEN ',' DEC ')'
+    | 'abap.raw(' LEN ')'
+    | 'abap.sstring(' LEN ')'
+    | 'abap.tims' '(6)'?
+    | 'abap.unit(3)'
+    ;
+
+data_element
+    : IDENTIFIER
+    ;
+
+parameter_typing
+    : dtype
+    | data_element
+    ;
+
+parameter_definition
+    : parameter_annotation* parameter_name ':' parameter_typing parameter_annotation*
+    ;
+
+parameter_list
+    : WITH PARAMETERS (parameter_definition ',')* parameter_definition
+    ;
+
 view
-    : DEFINE? VIEW IDENTIFIER /*name_list? parameter_list?*/ AS select_statement
+    : DEFINE? VIEW IDENTIFIER /*name_list?*/ parameter_list? AS select_statement
     ;
 
 cdsddl

@@ -13,6 +13,13 @@ import { Cond_exprContext } from "./ABAPCDSParser";
 import { Min_max_clauseContext } from "./ABAPCDSParser";
 import { AssociationContext } from "./ABAPCDSParser";
 import { Select_statementContext } from "./ABAPCDSParser";
+import { Parameter_annotationContext } from "./ABAPCDSParser";
+import { Parameter_nameContext } from "./ABAPCDSParser";
+import { DtypeContext } from "./ABAPCDSParser";
+import { Data_elementContext } from "./ABAPCDSParser";
+import { Parameter_typingContext } from "./ABAPCDSParser";
+import { Parameter_definitionContext } from "./ABAPCDSParser";
+import { Parameter_listContext } from "./ABAPCDSParser";
 import { ViewContext } from "./ABAPCDSParser";
 import { CdsddlContext } from "./ABAPCDSParser";
 import { Annotation_valueContext } from "./ABAPCDSParser";
@@ -151,6 +158,83 @@ export interface ABAPCDSListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitSelect_statement?: (ctx: Select_statementContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.parameter_annotation`.
+	 * @param ctx the parse tree
+	 */
+	enterParameter_annotation?: (ctx: Parameter_annotationContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.parameter_annotation`.
+	 * @param ctx the parse tree
+	 */
+	exitParameter_annotation?: (ctx: Parameter_annotationContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.parameter_name`.
+	 * @param ctx the parse tree
+	 */
+	enterParameter_name?: (ctx: Parameter_nameContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.parameter_name`.
+	 * @param ctx the parse tree
+	 */
+	exitParameter_name?: (ctx: Parameter_nameContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.dtype`.
+	 * @param ctx the parse tree
+	 */
+	enterDtype?: (ctx: DtypeContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.dtype`.
+	 * @param ctx the parse tree
+	 */
+	exitDtype?: (ctx: DtypeContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.data_element`.
+	 * @param ctx the parse tree
+	 */
+	enterData_element?: (ctx: Data_elementContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.data_element`.
+	 * @param ctx the parse tree
+	 */
+	exitData_element?: (ctx: Data_elementContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.parameter_typing`.
+	 * @param ctx the parse tree
+	 */
+	enterParameter_typing?: (ctx: Parameter_typingContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.parameter_typing`.
+	 * @param ctx the parse tree
+	 */
+	exitParameter_typing?: (ctx: Parameter_typingContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.parameter_definition`.
+	 * @param ctx the parse tree
+	 */
+	enterParameter_definition?: (ctx: Parameter_definitionContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.parameter_definition`.
+	 * @param ctx the parse tree
+	 */
+	exitParameter_definition?: (ctx: Parameter_definitionContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.parameter_list`.
+	 * @param ctx the parse tree
+	 */
+	enterParameter_list?: (ctx: Parameter_listContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.parameter_list`.
+	 * @param ctx the parse tree
+	 */
+	exitParameter_list?: (ctx: Parameter_listContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `ABAPCDSParser.view`.
