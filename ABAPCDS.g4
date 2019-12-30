@@ -174,6 +174,8 @@ cond_expr
     : rel_expr
     | NOT rel_expr
     | rel_expr ((AND|OR) rel_expr)+
+    | '(' cond_expr ')'
+    | '(' cond_expr ((AND|OR) cond_expr)+ ')'
     ;
 
 min_max_clause
@@ -360,6 +362,8 @@ field
     | builtin_func
     | case_expr
     | cast_expr
+    | STRING
+    | NUMBER
     ;
 
 key_field
