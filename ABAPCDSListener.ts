@@ -11,6 +11,8 @@ import { Data_source_parametersContext } from "./ABAPCDSParser";
 import { Data_sourceContext } from "./ABAPCDSParser";
 import { TargetContext } from "./ABAPCDSParser";
 import { Associated_viewContext } from "./ABAPCDSParser";
+import { Rel_oprContext } from "./ABAPCDSParser";
+import { Rel_sideContext } from "./ABAPCDSParser";
 import { Rel_exprContext } from "./ABAPCDSParser";
 import { Cond_exprContext } from "./ABAPCDSParser";
 import { Min_max_clauseContext } from "./ABAPCDSParser";
@@ -144,6 +146,28 @@ export interface ABAPCDSListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitAssociated_view?: (ctx: Associated_viewContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.rel_opr`.
+	 * @param ctx the parse tree
+	 */
+	enterRel_opr?: (ctx: Rel_oprContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.rel_opr`.
+	 * @param ctx the parse tree
+	 */
+	exitRel_opr?: (ctx: Rel_oprContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.rel_side`.
+	 * @param ctx the parse tree
+	 */
+	enterRel_side?: (ctx: Rel_sideContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.rel_side`.
+	 * @param ctx the parse tree
+	 */
+	exitRel_side?: (ctx: Rel_sideContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `ABAPCDSParser.rel_expr`.

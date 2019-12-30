@@ -47,6 +47,11 @@ ON:                 'ON' | 'on';
 NOT:                'NOT' | 'not';
 AND:                'AND' | 'and';
 OR:                 'OR' | 'or';
+BETWEEN:            'BETWEEN' | 'between';
+LIKE:               'LIKE' | 'like';
+ESCAPE:             'ESCAPE' | 'escape';
+IS:                 'IS' | 'is';
+NULL:               'NULL' | 'null';
 INNER:              'INNER' | 'inner';
 JOIN:               'JOIN' | 'join';
 OUTER:              'OUTER' | 'outer';
@@ -133,10 +138,26 @@ associated_view
     : IDENTIFIER
     ;
 
+rel_opr
+    : '='
+    | '<>'
+    | '<'
+    | '>'
+    | '<='
+    | '>='
+    ;
+
+rel_side
+    : path_expr
+    | STRING
+    | parameter
+    ;
+
 rel_expr
-    : path_expr '=' path_expr
-    | path_expr '=' STRING
-    | path_expr '=' parameter
+    : rel_side rel_opr rel_side
+    | rel_side BETWEEN rel_side AND rel_side
+    | rel_side LIKE STRING (ESCAPE STRING) // Should actually be a single character escape
+    | rel_side IS NOT? NULL
     ;
 
 cond_expr

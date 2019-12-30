@@ -11,6 +11,8 @@ import { Data_source_parametersContext } from "./ABAPCDSParser";
 import { Data_sourceContext } from "./ABAPCDSParser";
 import { TargetContext } from "./ABAPCDSParser";
 import { Associated_viewContext } from "./ABAPCDSParser";
+import { Rel_oprContext } from "./ABAPCDSParser";
+import { Rel_sideContext } from "./ABAPCDSParser";
 import { Rel_exprContext } from "./ABAPCDSParser";
 import { Cond_exprContext } from "./ABAPCDSParser";
 import { Min_max_clauseContext } from "./ABAPCDSParser";
@@ -115,6 +117,20 @@ export interface ABAPCDSVisitor<Result> extends ParseTreeVisitor<Result> {
 	 * @return the visitor result
 	 */
 	visitAssociated_view?: (ctx: Associated_viewContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.rel_opr`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitRel_opr?: (ctx: Rel_oprContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.rel_side`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitRel_side?: (ctx: Rel_sideContext) => Result;
 
 	/**
 	 * Visit a parse tree produced by `ABAPCDSParser.rel_expr`.
