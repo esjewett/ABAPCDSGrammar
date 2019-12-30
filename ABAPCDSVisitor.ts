@@ -26,6 +26,9 @@ import { Parameter_listContext } from "./ABAPCDSParser";
 import { ViewContext } from "./ABAPCDSParser";
 import { CdsddlContext } from "./ABAPCDSParser";
 import { Annotation_valueContext } from "./ABAPCDSParser";
+import { SubannosContext } from "./ABAPCDSParser";
+import { ArrelemContext } from "./ABAPCDSParser";
+import { Annotation_right_sideContext } from "./ABAPCDSParser";
 import { AnnotationContext } from "./ABAPCDSParser";
 import { ParameterContext } from "./ABAPCDSParser";
 import { Session_variableContext } from "./ABAPCDSParser";
@@ -216,6 +219,27 @@ export interface ABAPCDSVisitor<Result> extends ParseTreeVisitor<Result> {
 	 * @return the visitor result
 	 */
 	visitAnnotation_value?: (ctx: Annotation_valueContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.subannos`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitSubannos?: (ctx: SubannosContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.arrelem`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitArrelem?: (ctx: ArrelemContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.annotation_right_side`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitAnnotation_right_side?: (ctx: Annotation_right_sideContext) => Result;
 
 	/**
 	 * Visit a parse tree produced by `ABAPCDSParser.annotation`.

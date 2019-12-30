@@ -27,7 +27,7 @@ SELECT:             'select';
 FROM:               'from';
 BOOLEANLITERAL:     'true'
                 |   'false';
-KEY:                'key';
+KEY:                'KEY' | 'key';
 CASE:               'CASE' | 'case';
 WHEN:               'WHEN' | 'when';
 THEN:               'THEN' | 'then';
@@ -217,8 +217,23 @@ annotation_value
     | ENUM
     ;
 
+subannos
+    : IDENTIFIER ('.' IDENTIFIER)* ANNOTATIONSEPERATOR WS* annotation_right_side
+    ;
+
+arrelem
+    : annotation_value
+    | '{' (subannos ',')* subannos '}'
+    ;
+
+annotation_right_side
+    : annotation_value
+    | '{' (subannos ',')* subannos '}'
+    | '[' arrelem* arrelem ']'
+    ;
+
 annotation
-    :   ANNOTATIONKEY ANNOTATIONSEPERATOR WS* annotation_value
+    :   ANNOTATIONKEY ANNOTATIONSEPERATOR WS* annotation_right_side
     ;
 
 parameter

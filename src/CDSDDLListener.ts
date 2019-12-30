@@ -38,12 +38,12 @@ export class CDSDDLListener implements ABAPCDSListener {
     console.log(this.indentString(ctx) + 'CDS');
   }
 
-  public enterAnnotation(ctx: AnnotationContext) {
-    const value = ctx.annotation_value().STRING()
-      || ctx.annotation_value().ENUM()
-      || ctx.annotation_value().BOOLEANLITERAL();
-    console.log(this.indentString(ctx) + 'Annotation: ' + ctx.ANNOTATIONKEY() + ': ' + value);
-  }
+  // public enterAnnotation(ctx: AnnotationContext) {
+  //   const value = ctx.annotation_right_side().annotation_value().STRING()
+  //     || ctx.annotation_right_side().annotation_value().ENUM()
+  //     || ctx.annotation_right_side().annotation_value().BOOLEANLITERAL();
+  //   console.log(this.indentString(ctx) + 'Annotation: ' + ctx.ANNOTATIONKEY() + ': ' + value);
+  // }
 
   public enterView(ctx: ViewContext) {
     console.log(this.indentString(ctx) + 'View');
