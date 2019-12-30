@@ -5,6 +5,9 @@ import { ParseTreeVisitor } from "antlr4ts/tree/ParseTreeVisitor";
 
 import { StatementContext } from "./ABAPCDSParser";
 import { AliasContext } from "./ABAPCDSParser";
+import { JoinContext } from "./ABAPCDSParser";
+import { Parameter_actualContext } from "./ABAPCDSParser";
+import { Data_source_parametersContext } from "./ABAPCDSParser";
 import { Data_sourceContext } from "./ABAPCDSParser";
 import { TargetContext } from "./ABAPCDSParser";
 import { Associated_viewContext } from "./ABAPCDSParser";
@@ -66,6 +69,27 @@ export interface ABAPCDSVisitor<Result> extends ParseTreeVisitor<Result> {
 	 * @return the visitor result
 	 */
 	visitAlias?: (ctx: AliasContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.join`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitJoin?: (ctx: JoinContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.parameter_actual`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitParameter_actual?: (ctx: Parameter_actualContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.data_source_parameters`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitData_source_parameters?: (ctx: Data_source_parametersContext) => Result;
 
 	/**
 	 * Visit a parse tree produced by `ABAPCDSParser.data_source`.

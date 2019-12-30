@@ -5,6 +5,9 @@ import { ParseTreeListener } from "antlr4ts/tree/ParseTreeListener";
 
 import { StatementContext } from "./ABAPCDSParser";
 import { AliasContext } from "./ABAPCDSParser";
+import { JoinContext } from "./ABAPCDSParser";
+import { Parameter_actualContext } from "./ABAPCDSParser";
+import { Data_source_parametersContext } from "./ABAPCDSParser";
 import { Data_sourceContext } from "./ABAPCDSParser";
 import { TargetContext } from "./ABAPCDSParser";
 import { Associated_viewContext } from "./ABAPCDSParser";
@@ -71,6 +74,39 @@ export interface ABAPCDSListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitAlias?: (ctx: AliasContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.join`.
+	 * @param ctx the parse tree
+	 */
+	enterJoin?: (ctx: JoinContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.join`.
+	 * @param ctx the parse tree
+	 */
+	exitJoin?: (ctx: JoinContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.parameter_actual`.
+	 * @param ctx the parse tree
+	 */
+	enterParameter_actual?: (ctx: Parameter_actualContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.parameter_actual`.
+	 * @param ctx the parse tree
+	 */
+	exitParameter_actual?: (ctx: Parameter_actualContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.data_source_parameters`.
+	 * @param ctx the parse tree
+	 */
+	enterData_source_parameters?: (ctx: Data_source_parametersContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.data_source_parameters`.
+	 * @param ctx the parse tree
+	 */
+	exitData_source_parameters?: (ctx: Data_source_parametersContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `ABAPCDSParser.data_source`.
