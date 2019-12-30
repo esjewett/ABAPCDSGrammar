@@ -60,7 +60,7 @@ RIGHT:              'RIGHT' | 'right';
 ONE:                'ONE' | 'one';
 MANY:               'MANY' | 'many';
 CROSS:              'CROSS' | 'cross';
-SINGLELINECOMMENT:  '//' ~[\r\n]* -> skip;
+SINGLELINECOMMENT:  ('//' | '--') ~[\r\n]* -> skip;
 MULTILINECOMMENT:   '/*' .*? '*/' -> skip;
 
 NUMBER
@@ -147,10 +147,15 @@ rel_opr
     | '>='
     ;
 
+projection
+    : '$projection.' path_expr
+    ;
+
 rel_side
     : path_expr
     | STRING
     | parameter
+    | projection
     ;
 
 rel_expr
