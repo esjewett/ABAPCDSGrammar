@@ -18,6 +18,7 @@ import { Rel_exprContext } from "./ABAPCDSParser";
 import { Cond_exprContext } from "./ABAPCDSParser";
 import { Min_max_clauseContext } from "./ABAPCDSParser";
 import { AssociationContext } from "./ABAPCDSParser";
+import { ClausesContext } from "./ABAPCDSParser";
 import { Select_statementContext } from "./ABAPCDSParser";
 import { Parameter_annotationContext } from "./ABAPCDSParser";
 import { Parameter_nameContext } from "./ABAPCDSParser";
@@ -167,6 +168,13 @@ export interface ABAPCDSVisitor<Result> extends ParseTreeVisitor<Result> {
 	 * @return the visitor result
 	 */
 	visitAssociation?: (ctx: AssociationContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.clauses`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitClauses?: (ctx: ClausesContext) => Result;
 
 	/**
 	 * Visit a parse tree produced by `ABAPCDSParser.select_statement`.
