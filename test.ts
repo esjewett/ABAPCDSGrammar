@@ -12,7 +12,7 @@ import * as path from 'path';
 
 const walk = (
     dir: fs.PathLike,
-    done: (err: NodeJS.ErrnoException | null, results: string[]) => void
+    done: (err: NodeJS.ErrnoException | null, results: string[]) => boolean,
 ) => {
   let results: string[] = [];
   fs.readdir(dir, (err, list) => {
@@ -27,34 +27,42 @@ const walk = (
             results = results.concat(res);
             pending = pending - 1;
             if (!pending) done(null, results);
+            return false;
           });
         } else {
           results.push(file);
           pending = pending - 1;
           if (!pending) done(null, results);
+          return false;
         }
       });
     });
   });
+  return false;
 };
 
-export function processDir(dirName: string) {
+export function processDir(dirName: string, errorListener?: (err: Error) => void) {
   walk(dirName, (err, files = []) => {
     files
       .filter(file => file.endsWith('.asddls'))
       .forEach((fileName) => {
-        processFile(fileName);
+        processFile(fileName, errorListener);
       })
+    return false;
   })
 
   return false;
 }
 
-export function processFile(fileName: string) {
+export function processFile(fileName: string, errorListener?: (err: Error) => void) {
   fs.readFile(fileName, (err, data) => {
     if (!err) {
       console.log(fileName);
-      const tree = processText(data.toString());
+      try {
+        const tree = processText(data.toString());
+      } catch(err) {
+        if(errorListener) errorListener(err);
+      }
       // console.log(tree.children![0]);
       // console.log(tree);
     } else {
@@ -72,10 +80,18 @@ export function processText(source: string = '') {
   const parser = new ABAPCDSParser(tokenStream);
   const tree = parser.cdsddl();
   const printer = new CDSDDLListener(parser);
+  if (parser.numberOfSyntaxErrors > 0) {
+    throw new Error('Syntax errors: ' + parser.numberOfSyntaxErrors);
+  }
   //ParseTreeWalker.DEFAULT.walk(printer as ParseTreeListener, tree);
   return tree;
 }
 
-//processFile('./examples/#mindset#i_error_log.ddls.asddls');
-//processFile('./examples/#mindset#c_error_log.ddls.asddls');
-processDir('./examples')
+const errorListener = (err: Error) => {
+  // If a syntax error occurs during parsing, set the exit code to 1
+  process.exitCode = 1;
+}
+
+//processFile('./examples/#mindset#i_error_log.ddls.asddls', errorListener);
+//processFile('./examples/#mindset#c_error_log.ddls.asddls', errorListener);
+processDir('./examples', errorListener);
