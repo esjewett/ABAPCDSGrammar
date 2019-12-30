@@ -13,6 +13,13 @@ import { Cond_exprContext } from "./ABAPCDSParser";
 import { Min_max_clauseContext } from "./ABAPCDSParser";
 import { AssociationContext } from "./ABAPCDSParser";
 import { Select_statementContext } from "./ABAPCDSParser";
+import { Parameter_annotationContext } from "./ABAPCDSParser";
+import { Parameter_nameContext } from "./ABAPCDSParser";
+import { DtypeContext } from "./ABAPCDSParser";
+import { Data_elementContext } from "./ABAPCDSParser";
+import { Parameter_typingContext } from "./ABAPCDSParser";
+import { Parameter_definitionContext } from "./ABAPCDSParser";
+import { Parameter_listContext } from "./ABAPCDSParser";
 import { ViewContext } from "./ABAPCDSParser";
 import { CdsddlContext } from "./ABAPCDSParser";
 import { Annotation_valueContext } from "./ABAPCDSParser";
@@ -114,6 +121,55 @@ export interface ABAPCDSVisitor<Result> extends ParseTreeVisitor<Result> {
 	 * @return the visitor result
 	 */
 	visitSelect_statement?: (ctx: Select_statementContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.parameter_annotation`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitParameter_annotation?: (ctx: Parameter_annotationContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.parameter_name`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitParameter_name?: (ctx: Parameter_nameContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.dtype`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitDtype?: (ctx: DtypeContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.data_element`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitData_element?: (ctx: Data_elementContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.parameter_typing`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitParameter_typing?: (ctx: Parameter_typingContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.parameter_definition`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitParameter_definition?: (ctx: Parameter_definitionContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.parameter_list`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitParameter_list?: (ctx: Parameter_listContext) => Result;
 
 	/**
 	 * Visit a parse tree produced by `ABAPCDSParser.view`.
