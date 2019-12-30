@@ -36,6 +36,7 @@ import { Case_operandContext } from "./ABAPCDSParser";
 import { When_clause_simpleContext } from "./ABAPCDSParser";
 import { Else_clauseContext } from "./ABAPCDSParser";
 import { Case_exprContext } from "./ABAPCDSParser";
+import { Cast_exprContext } from "./ABAPCDSParser";
 import { FieldContext } from "./ABAPCDSParser";
 import { Key_fieldContext } from "./ABAPCDSParser";
 import { Field_definitionContext } from "./ABAPCDSParser";
@@ -411,6 +412,17 @@ export interface ABAPCDSListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitCase_expr?: (ctx: Case_exprContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.cast_expr`.
+	 * @param ctx the parse tree
+	 */
+	enterCast_expr?: (ctx: Cast_exprContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.cast_expr`.
+	 * @param ctx the parse tree
+	 */
+	exitCast_expr?: (ctx: Cast_exprContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `ABAPCDSParser.field`.

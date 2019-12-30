@@ -8,7 +8,6 @@ grammar ABAPCDS;
 //  - Relational expressions
 //  - Aggregate expressions
 //  - Arithmatic expressions
-//  - Cast expressions
 //  - Full annotation enum definitions
 //  - Joins
 //  - Enhancements - https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abencds_f1_extend_view.htm
@@ -34,6 +33,9 @@ WHEN:               'WHEN' | 'when';
 THEN:               'THEN' | 'then';
 ELSE:               'ELSE' | 'else';
 END:                'END' | 'end';
+CAST:               'CAST' | 'cast';
+PRESERVING:         'PRESERVING' | 'preserving';
+TYPE:               'TYPE' | 'type';
 DISTINCT:           'DISTINCT' | 'distinct';
 TO:                 'TO' | 'to';
 WITH:               'WITH' | 'with';
@@ -258,15 +260,20 @@ case_expr
     : CASE case_operand when_clause_simple* else_clause? END
     ;
 
+cast_expr
+    : CAST '(' field AS (dtype | data_element) (PRESERVING TYPE)? ')'
+    ;
+
 field
     : IDENTIFIER
+    // | path_expr
     | parameter
     | session_variable
     // | aggr_expr
     // | arith_expr
     | builtin_func
     | case_expr
-    // | cast_expr
+    | cast_expr
     ;
 
 key_field
