@@ -105,9 +105,9 @@ alias
 
 join
     : (
-            INNER? JOIN
-        |   (LEFT|RIGHT) OUTER ((TO ONE)|MANY)? JOIN
-        |   CROSS JOIN
+            (INNER? JOIN)
+        |   ((LEFT|RIGHT) OUTER ((TO ONE)|MANY)? JOIN)
+        |   (CROSS JOIN)
     ) data_source (ON cond_expr)?
     ;
 
@@ -136,16 +136,17 @@ associated_view
 rel_expr
     : path_expr '=' path_expr
     | path_expr '=' STRING
+    | path_expr '=' parameter
     ;
 
 cond_expr
     : rel_expr
-    | NOT cond_expr (AND|OR cond_expr)*
-    | cond_expr (AND|OR cond_expr)+
+    | NOT rel_expr
+    | rel_expr ((AND|OR) rel_expr)+
     ;
 
 min_max_clause
-    : '[' ('0'|'1') '..' ('1'|'*') ']'
+    : '[' (('0'|'1') '..')? ('1'|'*') ']'
     ;
 
 association
@@ -158,7 +159,7 @@ select_statement
     ;
 
 parameter_annotation
-    : annotation_value
+    : annotation
     ;
 
 parameter_name
@@ -214,6 +215,7 @@ cdsddl
 annotation_value
     : BOOLEANLITERAL
     | STRING
+    | NUMBER
     | ENUM
     ;
 
@@ -229,7 +231,7 @@ arrelem
 annotation_right_side
     : annotation_value
     | '{' (subannos ',')* subannos '}'
-    | '[' arrelem* arrelem ']'
+    | '[' (arrelem ',' )* arrelem ']'
     ;
 
 annotation

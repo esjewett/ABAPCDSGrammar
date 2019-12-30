@@ -87,7 +87,11 @@ export function processText(source: string = '') {
   return tree;
 }
 
+let totalErrors = 0;
+
 const errorListener = (err: Error) => {
+  totalErrors = totalErrors + 1;
+  console.log(totalErrors);
   // If a syntax error occurs during parsing, set the exit code to 1
   process.exitCode = 1;
 }
