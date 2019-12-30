@@ -38,6 +38,7 @@ import { Numeric_literalContext } from "./ABAPCDSParser";
 import { LiteralContext } from "./ABAPCDSParser";
 import { Case_resultContext } from "./ABAPCDSParser";
 import { Case_when_operandContext } from "./ABAPCDSParser";
+import { Path_exprContext } from "./ABAPCDSParser";
 import { Case_operandContext } from "./ABAPCDSParser";
 import { When_clause_simpleContext } from "./ABAPCDSParser";
 import { Else_clauseContext } from "./ABAPCDSParser";
@@ -440,6 +441,17 @@ export interface ABAPCDSListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitCase_when_operand?: (ctx: Case_when_operandContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.path_expr`.
+	 * @param ctx the parse tree
+	 */
+	enterPath_expr?: (ctx: Path_exprContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.path_expr`.
+	 * @param ctx the parse tree
+	 */
+	exitPath_expr?: (ctx: Path_exprContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `ABAPCDSParser.case_operand`.

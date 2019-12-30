@@ -38,6 +38,7 @@ import { Numeric_literalContext } from "./ABAPCDSParser";
 import { LiteralContext } from "./ABAPCDSParser";
 import { Case_resultContext } from "./ABAPCDSParser";
 import { Case_when_operandContext } from "./ABAPCDSParser";
+import { Path_exprContext } from "./ABAPCDSParser";
 import { Case_operandContext } from "./ABAPCDSParser";
 import { When_clause_simpleContext } from "./ABAPCDSParser";
 import { Else_clauseContext } from "./ABAPCDSParser";
@@ -303,6 +304,13 @@ export interface ABAPCDSVisitor<Result> extends ParseTreeVisitor<Result> {
 	 * @return the visitor result
 	 */
 	visitCase_when_operand?: (ctx: Case_when_operandContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.path_expr`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitPath_expr?: (ctx: Path_exprContext) => Result;
 
 	/**
 	 * Visit a parse tree produced by `ABAPCDSParser.case_operand`.
