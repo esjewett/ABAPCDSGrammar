@@ -47,6 +47,14 @@ ON:                 'ON' | 'on';
 NOT:                'NOT' | 'not';
 AND:                'AND' | 'and';
 OR:                 'OR' | 'or';
+INNER:              'INNER' | 'inner';
+JOIN:               'JOIN' | 'join';
+OUTER:              'OUTER' | 'outer';
+LEFT:               'LEFT' | 'left';
+RIGHT:              'RIGHT' | 'right';
+ONE:                'ONE' | 'one';
+MANY:               'MANY' | 'many';
+CROSS:              'CROSS' | 'cross';
 SINGLELINECOMMENT:  '//' ~[\r\n]* -> skip;
 MULTILINECOMMENT:   '/*' .*? '*/' -> skip;
 
@@ -95,8 +103,26 @@ alias
     : IDENTIFIER
     ;
 
+join
+    : (
+            INNER? JOIN
+        |   (LEFT|RIGHT) OUTER ((TO ONE)|MANY)? JOIN
+        |   CROSS JOIN
+    ) data_source (ON cond_expr)?
+    ;
+
+parameter_actual
+    : literal
+    | parameter
+    | session_variable
+    ;
+
+data_source_parameters
+    : '(' (parameter_name ':' parameter_actual ',')* parameter_name ':' parameter_actual ')'
+    ;
+
 data_source
-    : IDENTIFIER (AS alias)?
+    : IDENTIFIER data_source_parameters? (AS? alias)? join*
     ;
 
 target
@@ -109,6 +135,7 @@ associated_view
 
 rel_expr
     : IDENTIFIER ('.' IDENTIFIER)* '=' IDENTIFIER ('.' IDENTIFIER)*
+    | IDENTIFIER ('.' IDENTIFIER)* '=' STRING
     ;
 
 cond_expr
