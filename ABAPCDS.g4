@@ -25,6 +25,11 @@ VIEW:               'view';
 AS:                 'AS' | 'as';
 SELECT:             'select';
 FROM:               'from';
+WHERE:              'WHERE' | 'where';
+GROUPBY:            'GROUP BY' | 'group by';
+HAVING:             'HAVING' | 'having';
+UNION:              'UNION' | 'union';
+ALL:                'ALL' | 'all';
 BOOLEANLITERAL:     'true'
                 |   'false';
 KEY:                'KEY' | 'key';
@@ -179,9 +184,16 @@ association
     : ASSOCIATION min_max_clause? TO target (AS associated_view)? ON cond_expr (WITH DEFAULT FILTER cond_expr)?
     ;
 
+clauses
+    : WHERE cond_expr
+    | GROUPBY path_expr+
+    | HAVING cond_expr
+    | UNION ALL? select_statement
+    ;
+
 select_statement
     : SELECT DISTINCT? (( select_list FROM data_source association* ) 
-        | ( FROM data_source association* '{' select_list '}')) /*clauses*/
+        | ( FROM data_source association* '{' select_list '}')) clauses*
     ;
 
 parameter_annotation

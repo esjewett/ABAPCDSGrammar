@@ -18,6 +18,7 @@ import { Rel_exprContext } from "./ABAPCDSParser";
 import { Cond_exprContext } from "./ABAPCDSParser";
 import { Min_max_clauseContext } from "./ABAPCDSParser";
 import { AssociationContext } from "./ABAPCDSParser";
+import { ClausesContext } from "./ABAPCDSParser";
 import { Select_statementContext } from "./ABAPCDSParser";
 import { Parameter_annotationContext } from "./ABAPCDSParser";
 import { Parameter_nameContext } from "./ABAPCDSParser";
@@ -224,6 +225,17 @@ export interface ABAPCDSListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitAssociation?: (ctx: AssociationContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.clauses`.
+	 * @param ctx the parse tree
+	 */
+	enterClauses?: (ctx: ClausesContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.clauses`.
+	 * @param ctx the parse tree
+	 */
+	exitClauses?: (ctx: ClausesContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `ABAPCDSParser.select_statement`.
