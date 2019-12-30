@@ -134,8 +134,8 @@ associated_view
     ;
 
 rel_expr
-    : IDENTIFIER ('.' IDENTIFIER)* '=' IDENTIFIER ('.' IDENTIFIER)*
-    | IDENTIFIER ('.' IDENTIFIER)* '=' STRING
+    : path_expr '=' path_expr
+    | path_expr '=' STRING
     ;
 
 cond_expr
@@ -266,11 +266,15 @@ case_when_operand
     | IDENTIFIER
     ;
 
+path_expr
+    : IDENTIFIER ('.' IDENTIFIER)*
+    ;
+
 case_operand
     : IDENTIFIER
     | parameter
     | session_variable
-    // | path_expr
+    | path_expr
     | builtin_func
     // | arith_expr
     ;
@@ -293,7 +297,7 @@ cast_expr
 
 field
     : IDENTIFIER
-    // | path_expr
+    | path_expr
     | parameter
     | session_variable
     // | aggr_expr
