@@ -13,6 +13,7 @@ import { TargetContext } from "./ABAPCDSParser";
 import { Associated_viewContext } from "./ABAPCDSParser";
 import { Rel_oprContext } from "./ABAPCDSParser";
 import { ProjectionContext } from "./ABAPCDSParser";
+import { Domain_stringContext } from "./ABAPCDSParser";
 import { Rel_sideContext } from "./ABAPCDSParser";
 import { Rel_exprContext } from "./ABAPCDSParser";
 import { Cond_exprContext } from "./ABAPCDSParser";
@@ -172,6 +173,17 @@ export interface ABAPCDSListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitProjection?: (ctx: ProjectionContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.domain_string`.
+	 * @param ctx the parse tree
+	 */
+	enterDomain_string?: (ctx: Domain_stringContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.domain_string`.
+	 * @param ctx the parse tree
+	 */
+	exitDomain_string?: (ctx: Domain_stringContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `ABAPCDSParser.rel_side`.

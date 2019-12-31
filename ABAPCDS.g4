@@ -156,9 +156,13 @@ projection
     : '$projection.' path_expr
     ;
 
+domain_string
+    : '#' IDENTIFIER '.' STRING
+    ;
+
 rel_side
     : path_expr
-    | STRING
+    | character_literal
     | parameter
     | projection
     ;
@@ -255,7 +259,7 @@ cdsddl
 
 annotation_value
     : BOOLEANLITERAL
-    | STRING
+    | character_literal
     | NUMBER
     | ENUM
     ;
@@ -333,6 +337,7 @@ builtin_func
 
 character_literal
     : STRING
+    | domain_string
     ;
 
 numeric_literal
