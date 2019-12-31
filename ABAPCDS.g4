@@ -34,8 +34,7 @@ THEN:               'THEN' | 'then';
 ELSE:               'ELSE' | 'else';
 END:                'END' | 'end';
 CAST:               'CAST' | 'cast';
-PRESERVING:         'PRESERVING' | 'preserving';
-TYPE:               'TYPE' | 'type';
+PRESERVINGTYPE:     'PRESERVING TYPE' | 'preserving type';
 DISTINCT:           'DISTINCT' | 'distinct';
 TO:                 'TO' | 'to';
 WITH:               'WITH' | 'with';
@@ -210,7 +209,7 @@ parameter_name
 dtype
     : 'abap.char(' INTEGER ')'
     | 'abap.clnt' '(3)'?
-    | 'abap.cuky(5)'
+    | 'abap.cuky' '(5)'?
     | 'abap.curr(' INTEGER ',' INTEGER ')'
     | 'abap.dats' '(8)'?
     // | 'abap.dec(' LEN ',' DEC ')'
@@ -262,7 +261,7 @@ annotation_value
     ;
 
 subannos
-    : IDENTIFIER ('.' IDENTIFIER)* ANNOTATIONSEPERATOR WS* annotation_right_side
+    : IDENTIFIER ('.' IDENTIFIER)* (ANNOTATIONSEPERATOR annotation_right_side)?
     ;
 
 arrelem
@@ -392,7 +391,7 @@ case_expr
     ;
 
 cast_expr
-    : CAST '(' field AS (dtype | data_element) (PRESERVING TYPE)? ')'
+    : CAST '(' field AS (dtype | data_element) (PRESERVINGTYPE)? ')'
     ;
 
 field
