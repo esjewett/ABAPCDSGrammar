@@ -378,12 +378,17 @@ when_clause_simple
     : WHEN case_when_operand THEN case_result
     ;
 
+when_clause_complex
+    : WHEN cond_expr THEN case_result
+    ;
+
 else_clause
     : ELSE case_result
     ;
 
 case_expr
     : CASE case_operand when_clause_simple* else_clause? END
+    | CASE when_clause_complex* else_clause? END
     ;
 
 cast_expr

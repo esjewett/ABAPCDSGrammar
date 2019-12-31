@@ -48,6 +48,7 @@ import { Case_when_operandContext } from "./ABAPCDSParser";
 import { Path_exprContext } from "./ABAPCDSParser";
 import { Case_operandContext } from "./ABAPCDSParser";
 import { When_clause_simpleContext } from "./ABAPCDSParser";
+import { When_clause_complexContext } from "./ABAPCDSParser";
 import { Else_clauseContext } from "./ABAPCDSParser";
 import { Case_exprContext } from "./ABAPCDSParser";
 import { Cast_exprContext } from "./ABAPCDSParser";
@@ -381,6 +382,13 @@ export interface ABAPCDSVisitor<Result> extends ParseTreeVisitor<Result> {
 	 * @return the visitor result
 	 */
 	visitWhen_clause_simple?: (ctx: When_clause_simpleContext) => Result;
+
+	/**
+	 * Visit a parse tree produced by `ABAPCDSParser.when_clause_complex`.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	visitWhen_clause_complex?: (ctx: When_clause_complexContext) => Result;
 
 	/**
 	 * Visit a parse tree produced by `ABAPCDSParser.else_clause`.
