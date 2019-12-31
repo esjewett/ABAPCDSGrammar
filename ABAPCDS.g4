@@ -157,7 +157,7 @@ projection
     ;
 
 domain_string
-    : '#' IDENTIFIER '.' STRING
+    : ENUM '.' ( STRING )
     ;
 
 rel_side
@@ -177,9 +177,9 @@ rel_expr
 cond_expr
     : rel_expr
     | NOT rel_expr
-    | rel_expr ((AND|OR) rel_expr)+
+    | rel_expr ((AND | OR) cond_expr)+
     | '(' cond_expr ')'
-    | '(' cond_expr ((AND|OR) cond_expr)+ ')'
+    | '(' cond_expr ((AND | OR) cond_expr)+ ')'
     ;
 
 min_max_clause

@@ -98,4 +98,5 @@ const errorListener = (err: Error) => {
 
 //processFile('./examples/#mindset#i_error_log.ddls.asddls', errorListener);
 //processFile('./examples/#mindset#c_error_log.ddls.asddls', errorListener);
+// processFile('./examples/stockbal/abap-search-tools/zsat_p_databaseview.ddls.asddls', errorListener)
 processDir('./examples', errorListener);
