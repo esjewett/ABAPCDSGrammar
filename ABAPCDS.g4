@@ -154,6 +154,7 @@ domain_string
 rel_side
     : path_expr
     | character_literal
+    | numeric_literal
     | parameter
     | projection
     ;
