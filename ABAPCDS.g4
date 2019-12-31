@@ -212,7 +212,8 @@ dtype
     | 'abap.cuky(5)'
     | 'abap.curr(' LEN ',' DEC ')'
     | 'abap.dats' '(8)'?
-    | 'abap.dec(' LEN ',' DEC ')'
+    // | 'abap.dec(' LEN ',' DEC ')'
+    | 'abap.dec(' NUMBER ',' ('0' | DEC) ')' // Why does this work and not the above?
     | 'abap.fltp' '(16,16)'?
     | 'abap.int1' '(3)'?
     | 'abap.int2' '(5)'?
@@ -290,9 +291,44 @@ session_variable
     | '$session.system_date'
     ;
 
+func
+    : 'dats_days_between' | 'DATS_DAYS_BETWEEN'
+    | 'tstmp_to_dats' | 'TSTMP_TO_DATS'
+    | 'abap_system_timezone' | 'ABAP_SYSTEM_TIMEZONE'
+    | 'abs' | 'ABS'
+    | 'ceil' | 'CEIL'
+    | 'div' | 'DIV'
+    | 'division' | 'DIVISION'
+    | 'floor' | 'FLOOR'
+    | 'mod' | 'MOD'
+    | 'round' | 'ROUND'
+    | 'concat' | 'CONCAT'
+    | 'concat_with_space' | 'CONCAT_WITH_SPACE'
+    | 'instr' | 'INSTR'
+    | 'left' | 'LEFT'
+    | 'length' | 'LENGTH'
+    | 'lower' | 'LOWER'
+    | 'lpad' | 'LPAD'
+    | 'ltrim' | 'LTRIM'
+    | 'replace' | 'REPLACE'
+    | 'right' | 'RIGHT'
+    | 'rpad' | 'RPAD'
+    | 'rtrim' | 'RTRIM'
+    | 'substring' | 'SUBSTRING'
+    | 'upper' | 'UPPER'
+    | 'bintohex' | 'BINTOHEX'
+    | 'hextobin' | 'HEXTOBIN'
+    | 'coalesce' | 'COALESCE'
+    ;
+
+arg
+    : field
+    | '\'NULL\''
+    ;
+
 builtin_func
-    : 'DATS_DAYS_BETWEEN(ErrorDate, CurrentDate)'
-    | 'TSTMP_TO_DATS(cast(TimeStamp as abap.dec(15,0)), abap_system_timezone( $session.client,\'NULL\' ), $session.client, \'NULL\')'
+    : func '(' arg (',' arg)* ')'
+    | 'FLTP_TO_DEC(' arg AS dtype ')'
     ;
 
 character_literal

@@ -36,6 +36,8 @@ import { Annotation_right_sideContext } from "./ABAPCDSParser";
 import { AnnotationContext } from "./ABAPCDSParser";
 import { ParameterContext } from "./ABAPCDSParser";
 import { Session_variableContext } from "./ABAPCDSParser";
+import { FuncContext } from "./ABAPCDSParser";
+import { ArgContext } from "./ABAPCDSParser";
 import { Builtin_funcContext } from "./ABAPCDSParser";
 import { Character_literalContext } from "./ABAPCDSParser";
 import { Numeric_literalContext } from "./ABAPCDSParser";
@@ -423,6 +425,28 @@ export interface ABAPCDSListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitSession_variable?: (ctx: Session_variableContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.func`.
+	 * @param ctx the parse tree
+	 */
+	enterFunc?: (ctx: FuncContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.func`.
+	 * @param ctx the parse tree
+	 */
+	exitFunc?: (ctx: FuncContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `ABAPCDSParser.arg`.
+	 * @param ctx the parse tree
+	 */
+	enterArg?: (ctx: ArgContext) => void;
+	/**
+	 * Exit a parse tree produced by `ABAPCDSParser.arg`.
+	 * @param ctx the parse tree
+	 */
+	exitArg?: (ctx: ArgContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `ABAPCDSParser.builtin_func`.
