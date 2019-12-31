@@ -3,28 +3,23 @@ grammar ABAPCDS;
 // Todo:
 //  - name_list variant of SELECT
 //  - $EXTENSION
-//  - Path expressions (currently we have a very partial implementation)
-//  - Built-in/pre-defined functions
-//  - Relational expressions
 //  - Aggregate expressions
 //  - Arithmatic expressions
 //  - Full annotation enum definitions
-//  - Joins
 //  - Enhancements - https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abencds_f1_extend_view.htm
 //  - Metadata extensions
 //  - DCL
 //  - Table functions
-//  - WHERE/HAVING/GROUP BY/UNION clauses - https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abencds_select_clauses.htm
 
 WS  
     :   [ \t\r\n]+ -> skip
     ;
 
-DEFINE:             'define';
-VIEW:               'view';
+DEFINE:             'DEFINE' | 'define';
+VIEW:               'VIEW' | 'view';
 AS:                 'AS' | 'as';
-SELECT:             'select';
-FROM:               'from';
+SELECT:             'SELECT' | 'select';
+FROM:               'FROM' | 'from';
 WHERE:              'WHERE' | 'where';
 GROUPBY:            'GROUP BY' | 'group by';
 HAVING:             'HAVING' | 'having';
@@ -68,17 +63,13 @@ CROSS:              'CROSS' | 'cross';
 SINGLELINECOMMENT:  ('//' | '--') ~[\r\n]* -> skip;
 MULTILINECOMMENT:   '/*' .*? '*/' -> skip;
 
-NUMBER
-   : '-'? INT ('.' [0-9] +)?
+INTEGER
+   : INT
    ;
 
-LEN
-    : INT
-    ;
-
-DEC
-    : INT
-    ;
+NUMBER
+   : '-'? INTEGER ('.' [0-9] +)?
+   ;
 
 fragment INT
    : '0' | [1-9] [0-9]*
@@ -211,23 +202,23 @@ parameter_name
     ;
 
 dtype
-    : 'abap.char(' LEN ')'
+    : 'abap.char(' INTEGER ')'
     | 'abap.clnt' '(3)'?
     | 'abap.cuky(5)'
-    | 'abap.curr(' LEN ',' DEC ')'
+    | 'abap.curr(' INTEGER ',' INTEGER ')'
     | 'abap.dats' '(8)'?
     // | 'abap.dec(' LEN ',' DEC ')'
-    | 'abap.dec(' NUMBER ',' ('0' | DEC) ')' // Why does this work and not the above?
+    | 'abap.dec(' INTEGER ',' ('0' | INTEGER) ')' // Why does this work and not the above?
     | 'abap.fltp' '(16,16)'?
     | 'abap.int1' '(3)'?
     | 'abap.int2' '(5)'?
     | 'abap.int4' '(10)'?
     | 'abap.int8' '(19)'?
     | 'abap.lang' '(1)'?
-    | 'abap.numc(' LEN ')'
-    | 'abap.quan(' LEN ',' DEC ')'
-    | 'abap.raw(' LEN ')'
-    | 'abap.sstring(' LEN ')'
+    | 'abap.numc(' INTEGER ')'
+    | 'abap.quan(' INTEGER ',' INTEGER ')'
+    | 'abap.raw(' INTEGER ')'
+    | 'abap.sstring(' INTEGER ')'
     | 'abap.tims' '(6)'?
     | 'abap.unit(3)'
     ;
@@ -260,7 +251,7 @@ cdsddl
 annotation_value
     : BOOLEANLITERAL
     | character_literal
-    | NUMBER
+    | numeric_literal
     | ENUM
     ;
 
@@ -307,7 +298,7 @@ func
     | 'mod' | 'MOD'
     | 'round' | 'ROUND'
     | 'concat' | 'CONCAT'
-    | 'concat_with_space' | 'CONCAT_WITH_SPACE'
+    | 'concat_with_space' | 'CONCAT_WITH_SPACE' | 'concat_with_Space' // Need case insensitivity
     | 'instr' | 'INSTR'
     | LEFT
     | 'length' | 'LENGTH'
@@ -327,6 +318,7 @@ func
 
 arg
     : field
+    | '1'   // This should not be necessary but INTEGER is not capturing '1'
     | '\'NULL\''
     ;
 
@@ -342,6 +334,7 @@ character_literal
 
 numeric_literal
     : NUMBER
+    | INTEGER
     ;
 
 literal
@@ -403,8 +396,8 @@ field
     | builtin_func
     | case_expr
     | cast_expr
-    | STRING
-    | NUMBER
+    | character_literal
+    | numeric_literal
     ;
 
 key_field
