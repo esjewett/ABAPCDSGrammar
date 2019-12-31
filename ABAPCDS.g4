@@ -174,7 +174,12 @@ cond_expr
     ;
 
 min_max_clause
-    : '[' (('0'|'1') '..')? ('1'|'*') ']'
+    : '[0..1]'
+    | '[1..1]'
+    | '[0..*]'
+    | '[1..*]'
+    | '[1]'
+    | '[*]'
     ;
 
 association
@@ -208,7 +213,7 @@ dtype
     | 'abap.curr(' INTEGER ',' INTEGER ')'
     | 'abap.dats' '(8)'?
     // | 'abap.dec(' LEN ',' DEC ')'
-    | 'abap.dec(' INTEGER ',' ('0' | INTEGER) ')' // Why does this work and not the above?
+    | 'abap.dec(' INTEGER ',' INTEGER ')' // Why does this work and not the above?
     | 'abap.fltp' '(16,16)'?
     | 'abap.int1' '(3)'?
     | 'abap.int2' '(5)'?
@@ -318,7 +323,6 @@ func
 
 arg
     : field
-    | '1'   // This should not be necessary but INTEGER is not capturing '1'
     | '\'NULL\''
     ;
 
@@ -348,8 +352,7 @@ literal
 //     ;
 
 case_result
-    : '0'
-    | '3'
+    : field
     ;
 
 case_when_operand
