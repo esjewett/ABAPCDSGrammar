@@ -166,7 +166,7 @@ rel_side
 rel_expr
     : rel_side rel_opr rel_side
     | rel_side BETWEEN rel_side AND rel_side
-    | rel_side LIKE STRING (ESCAPE STRING) // Should actually be a single character escape
+    | rel_side LIKE STRING (ESCAPE STRING)? // Should actually be a single character escape
     | rel_side IS NOT? NULL
     ;
 
