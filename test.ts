@@ -83,7 +83,7 @@ export function processText(source: string = '') {
   if (parser.numberOfSyntaxErrors > 0) {
     throw new Error('Syntax errors: ' + parser.numberOfSyntaxErrors);
   }
-  //ParseTreeWalker.DEFAULT.walk(printer as ParseTreeListener, tree);
+  // ParseTreeWalker.DEFAULT.walk(printer as ParseTreeListener, tree);
   return tree;
 }
 

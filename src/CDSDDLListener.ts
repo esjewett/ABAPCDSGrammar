@@ -20,6 +20,7 @@ import {
   Cond_exprContext,
   Associated_viewContext,
   AliasContext,
+  JoinContext,
 } from '../ABAPCDSParser';
 
 import { ABAPCDSListener } from '../ABAPCDSListener';
@@ -89,6 +90,10 @@ export class CDSDDLListener implements ABAPCDSListener {
 
   public enterAlias(ctx: AliasContext) {
     console.log(this.indentString(ctx) + 'Alias: ' + ctx.IDENTIFIER());
+  }
+
+  public enterJoin(ctx: JoinContext) {
+    console.log(this.indentString(ctx) + 'Join');
   }
 
   public enterAssociation(ctx: AssociationContext) {

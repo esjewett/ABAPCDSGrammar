@@ -116,7 +116,7 @@ alias
 join
     : (
             (INNER? JOIN)
-        |   ((LEFT|RIGHT) OUTER ((TO ONE)|MANY)? JOIN)
+        |   ((LEFT | RIGHT) OUTER ((TO ONE) | MANY)? JOIN)
         |   (CROSS JOIN)
     ) data_source (ON cond_expr)?
     ;
@@ -309,13 +309,13 @@ func
     | 'concat' | 'CONCAT'
     | 'concat_with_space' | 'CONCAT_WITH_SPACE'
     | 'instr' | 'INSTR'
-    | 'left' | 'LEFT'
+    | LEFT
     | 'length' | 'LENGTH'
     | 'lower' | 'LOWER'
     | 'lpad' | 'LPAD'
     | 'ltrim' | 'LTRIM'
     | 'replace' | 'REPLACE'
-    | 'right' | 'RIGHT'
+    | RIGHT
     | 'rpad' | 'RPAD'
     | 'rtrim' | 'RTRIM'
     | 'substring' | 'SUBSTRING'

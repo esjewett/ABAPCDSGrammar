@@ -132,65 +132,61 @@ export class ABAPCDSParser extends Parser {
 	public static readonly T__101 = 102;
 	public static readonly T__102 = 103;
 	public static readonly T__103 = 104;
-	public static readonly T__104 = 105;
-	public static readonly T__105 = 106;
-	public static readonly T__106 = 107;
-	public static readonly T__107 = 108;
-	public static readonly WS = 109;
-	public static readonly DEFINE = 110;
-	public static readonly VIEW = 111;
-	public static readonly AS = 112;
-	public static readonly SELECT = 113;
-	public static readonly FROM = 114;
-	public static readonly WHERE = 115;
-	public static readonly GROUPBY = 116;
-	public static readonly HAVING = 117;
-	public static readonly UNION = 118;
-	public static readonly ALL = 119;
-	public static readonly BOOLEANLITERAL = 120;
-	public static readonly KEY = 121;
-	public static readonly CASE = 122;
-	public static readonly WHEN = 123;
-	public static readonly THEN = 124;
-	public static readonly ELSE = 125;
-	public static readonly END = 126;
-	public static readonly CAST = 127;
-	public static readonly PRESERVING = 128;
-	public static readonly TYPE = 129;
-	public static readonly DISTINCT = 130;
-	public static readonly TO = 131;
-	public static readonly WITH = 132;
-	public static readonly PARAMETERS = 133;
-	public static readonly DEFAULT = 134;
-	public static readonly FILTER = 135;
-	public static readonly ASSOCIATION = 136;
-	public static readonly ON = 137;
-	public static readonly NOT = 138;
-	public static readonly AND = 139;
-	public static readonly OR = 140;
-	public static readonly BETWEEN = 141;
-	public static readonly LIKE = 142;
-	public static readonly ESCAPE = 143;
-	public static readonly IS = 144;
-	public static readonly NULL = 145;
-	public static readonly INNER = 146;
-	public static readonly JOIN = 147;
-	public static readonly OUTER = 148;
-	public static readonly LEFT = 149;
-	public static readonly RIGHT = 150;
-	public static readonly ONE = 151;
-	public static readonly MANY = 152;
-	public static readonly CROSS = 153;
-	public static readonly SINGLELINECOMMENT = 154;
-	public static readonly MULTILINECOMMENT = 155;
-	public static readonly NUMBER = 156;
-	public static readonly LEN = 157;
-	public static readonly DEC = 158;
-	public static readonly IDENTIFIER = 159;
-	public static readonly ANNOTATIONKEY = 160;
-	public static readonly ENUM = 161;
-	public static readonly ANNOTATIONSEPERATOR = 162;
-	public static readonly STRING = 163;
+	public static readonly WS = 105;
+	public static readonly DEFINE = 106;
+	public static readonly VIEW = 107;
+	public static readonly AS = 108;
+	public static readonly SELECT = 109;
+	public static readonly FROM = 110;
+	public static readonly WHERE = 111;
+	public static readonly GROUPBY = 112;
+	public static readonly HAVING = 113;
+	public static readonly UNION = 114;
+	public static readonly ALL = 115;
+	public static readonly BOOLEANLITERAL = 116;
+	public static readonly KEY = 117;
+	public static readonly CASE = 118;
+	public static readonly WHEN = 119;
+	public static readonly THEN = 120;
+	public static readonly ELSE = 121;
+	public static readonly END = 122;
+	public static readonly CAST = 123;
+	public static readonly PRESERVING = 124;
+	public static readonly TYPE = 125;
+	public static readonly DISTINCT = 126;
+	public static readonly TO = 127;
+	public static readonly WITH = 128;
+	public static readonly PARAMETERS = 129;
+	public static readonly DEFAULT = 130;
+	public static readonly FILTER = 131;
+	public static readonly ASSOCIATION = 132;
+	public static readonly ON = 133;
+	public static readonly NOT = 134;
+	public static readonly AND = 135;
+	public static readonly OR = 136;
+	public static readonly BETWEEN = 137;
+	public static readonly LIKE = 138;
+	public static readonly ESCAPE = 139;
+	public static readonly IS = 140;
+	public static readonly NULL = 141;
+	public static readonly INNER = 142;
+	public static readonly JOIN = 143;
+	public static readonly OUTER = 144;
+	public static readonly LEFT = 145;
+	public static readonly RIGHT = 146;
+	public static readonly ONE = 147;
+	public static readonly MANY = 148;
+	public static readonly CROSS = 149;
+	public static readonly SINGLELINECOMMENT = 150;
+	public static readonly MULTILINECOMMENT = 151;
+	public static readonly NUMBER = 152;
+	public static readonly LEN = 153;
+	public static readonly DEC = 154;
+	public static readonly IDENTIFIER = 155;
+	public static readonly ANNOTATIONKEY = 156;
+	public static readonly ENUM = 157;
+	public static readonly ANNOTATIONSEPERATOR = 158;
+	public static readonly STRING = 159;
 	public static readonly RULE_statement = 0;
 	public static readonly RULE_alias = 1;
 	public static readonly RULE_join = 2;
@@ -274,19 +270,19 @@ export class ABAPCDSParser extends Parser {
 		"'abs'", "'ABS'", "'ceil'", "'CEIL'", "'div'", "'DIV'", "'division'", 
 		"'DIVISION'", "'floor'", "'FLOOR'", "'mod'", "'MOD'", "'round'", "'ROUND'", 
 		"'concat'", "'CONCAT'", "'concat_with_space'", "'CONCAT_WITH_SPACE'", 
-		"'instr'", "'INSTR'", "'left'", "'LEFT'", "'length'", "'LENGTH'", "'lower'", 
-		"'LOWER'", "'lpad'", "'LPAD'", "'ltrim'", "'LTRIM'", "'replace'", "'REPLACE'", 
-		"'right'", "'RIGHT'", "'rpad'", "'RPAD'", "'rtrim'", "'RTRIM'", "'substring'", 
-		"'SUBSTRING'", "'upper'", "'UPPER'", "'bintohex'", "'BINTOHEX'", "'hextobin'", 
-		"'HEXTOBIN'", "'coalesce'", "'COALESCE'", "''ULL''", "'FLTP_TO_DEC('", 
-		"'3'", undefined, "'define'", "'view'", undefined, "'select'", "'from'", 
+		"'instr'", "'INSTR'", "'length'", "'LENGTH'", "'lower'", "'LOWER'", "'lpad'", 
+		"'LPAD'", "'ltrim'", "'LTRIM'", "'replace'", "'REPLACE'", "'rpad'", "'RPAD'", 
+		"'rtrim'", "'RTRIM'", "'substring'", "'SUBSTRING'", "'upper'", "'UPPER'", 
+		"'bintohex'", "'BINTOHEX'", "'hextobin'", "'HEXTOBIN'", "'coalesce'", 
+		"'COALESCE'", "''ULL''", "'FLTP_TO_DEC('", "'3'", undefined, "'define'", 
+		"'view'", undefined, "'select'", "'from'", undefined, undefined, undefined, 
 		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
 		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
 		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
 		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
 		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
 		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
-		undefined, undefined, undefined, undefined, undefined, "':'",
+		undefined, undefined, "':'",
 	];
 	private static readonly _SYMBOLIC_NAMES: Array<string | undefined> = [
 		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
@@ -304,14 +300,14 @@ export class ABAPCDSParser extends Parser {
 		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
 		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
 		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
-		undefined, undefined, undefined, undefined, "WS", "DEFINE", "VIEW", "AS", 
-		"SELECT", "FROM", "WHERE", "GROUPBY", "HAVING", "UNION", "ALL", "BOOLEANLITERAL", 
-		"KEY", "CASE", "WHEN", "THEN", "ELSE", "END", "CAST", "PRESERVING", "TYPE", 
-		"DISTINCT", "TO", "WITH", "PARAMETERS", "DEFAULT", "FILTER", "ASSOCIATION", 
-		"ON", "NOT", "AND", "OR", "BETWEEN", "LIKE", "ESCAPE", "IS", "NULL", "INNER", 
-		"JOIN", "OUTER", "LEFT", "RIGHT", "ONE", "MANY", "CROSS", "SINGLELINECOMMENT", 
-		"MULTILINECOMMENT", "NUMBER", "LEN", "DEC", "IDENTIFIER", "ANNOTATIONKEY", 
-		"ENUM", "ANNOTATIONSEPERATOR", "STRING",
+		"WS", "DEFINE", "VIEW", "AS", "SELECT", "FROM", "WHERE", "GROUPBY", "HAVING", 
+		"UNION", "ALL", "BOOLEANLITERAL", "KEY", "CASE", "WHEN", "THEN", "ELSE", 
+		"END", "CAST", "PRESERVING", "TYPE", "DISTINCT", "TO", "WITH", "PARAMETERS", 
+		"DEFAULT", "FILTER", "ASSOCIATION", "ON", "NOT", "AND", "OR", "BETWEEN", 
+		"LIKE", "ESCAPE", "IS", "NULL", "INNER", "JOIN", "OUTER", "LEFT", "RIGHT", 
+		"ONE", "MANY", "CROSS", "SINGLELINECOMMENT", "MULTILINECOMMENT", "NUMBER", 
+		"LEN", "DEC", "IDENTIFIER", "ANNOTATIONKEY", "ENUM", "ANNOTATIONSEPERATOR", 
+		"STRING",
 	];
 	public static readonly VOCABULARY: Vocabulary = new VocabularyImpl(ABAPCDSParser._LITERAL_NAMES, ABAPCDSParser._SYMBOLIC_NAMES, []);
 
@@ -1432,14 +1428,12 @@ export class ABAPCDSParser extends Parser {
 			case ABAPCDSParser.T__98:
 			case ABAPCDSParser.T__99:
 			case ABAPCDSParser.T__100:
-			case ABAPCDSParser.T__101:
 			case ABAPCDSParser.T__102:
-			case ABAPCDSParser.T__103:
-			case ABAPCDSParser.T__104:
-			case ABAPCDSParser.T__106:
 			case ABAPCDSParser.KEY:
 			case ABAPCDSParser.CASE:
 			case ABAPCDSParser.CAST:
+			case ABAPCDSParser.LEFT:
+			case ABAPCDSParser.RIGHT:
 			case ABAPCDSParser.NUMBER:
 			case ABAPCDSParser.IDENTIFIER:
 			case ABAPCDSParser.ANNOTATIONKEY:
@@ -2570,7 +2564,7 @@ export class ABAPCDSParser extends Parser {
 			{
 			this.state = 526;
 			_la = this._input.LA(1);
-			if (!(((((_la - 52)) & ~0x1F) === 0 && ((1 << (_la - 52)) & ((1 << (ABAPCDSParser.T__51 - 52)) | (1 << (ABAPCDSParser.T__52 - 52)) | (1 << (ABAPCDSParser.T__53 - 52)) | (1 << (ABAPCDSParser.T__54 - 52)) | (1 << (ABAPCDSParser.T__55 - 52)) | (1 << (ABAPCDSParser.T__56 - 52)) | (1 << (ABAPCDSParser.T__57 - 52)) | (1 << (ABAPCDSParser.T__58 - 52)) | (1 << (ABAPCDSParser.T__59 - 52)) | (1 << (ABAPCDSParser.T__60 - 52)) | (1 << (ABAPCDSParser.T__61 - 52)) | (1 << (ABAPCDSParser.T__62 - 52)) | (1 << (ABAPCDSParser.T__63 - 52)) | (1 << (ABAPCDSParser.T__64 - 52)) | (1 << (ABAPCDSParser.T__65 - 52)) | (1 << (ABAPCDSParser.T__66 - 52)) | (1 << (ABAPCDSParser.T__67 - 52)) | (1 << (ABAPCDSParser.T__68 - 52)) | (1 << (ABAPCDSParser.T__69 - 52)) | (1 << (ABAPCDSParser.T__70 - 52)) | (1 << (ABAPCDSParser.T__71 - 52)) | (1 << (ABAPCDSParser.T__72 - 52)) | (1 << (ABAPCDSParser.T__73 - 52)) | (1 << (ABAPCDSParser.T__74 - 52)) | (1 << (ABAPCDSParser.T__75 - 52)) | (1 << (ABAPCDSParser.T__76 - 52)) | (1 << (ABAPCDSParser.T__77 - 52)) | (1 << (ABAPCDSParser.T__78 - 52)) | (1 << (ABAPCDSParser.T__79 - 52)) | (1 << (ABAPCDSParser.T__80 - 52)) | (1 << (ABAPCDSParser.T__81 - 52)) | (1 << (ABAPCDSParser.T__82 - 52)))) !== 0) || ((((_la - 84)) & ~0x1F) === 0 && ((1 << (_la - 84)) & ((1 << (ABAPCDSParser.T__83 - 84)) | (1 << (ABAPCDSParser.T__84 - 84)) | (1 << (ABAPCDSParser.T__85 - 84)) | (1 << (ABAPCDSParser.T__86 - 84)) | (1 << (ABAPCDSParser.T__87 - 84)) | (1 << (ABAPCDSParser.T__88 - 84)) | (1 << (ABAPCDSParser.T__89 - 84)) | (1 << (ABAPCDSParser.T__90 - 84)) | (1 << (ABAPCDSParser.T__91 - 84)) | (1 << (ABAPCDSParser.T__92 - 84)) | (1 << (ABAPCDSParser.T__93 - 84)) | (1 << (ABAPCDSParser.T__94 - 84)) | (1 << (ABAPCDSParser.T__95 - 84)) | (1 << (ABAPCDSParser.T__96 - 84)) | (1 << (ABAPCDSParser.T__97 - 84)) | (1 << (ABAPCDSParser.T__98 - 84)) | (1 << (ABAPCDSParser.T__99 - 84)) | (1 << (ABAPCDSParser.T__100 - 84)) | (1 << (ABAPCDSParser.T__101 - 84)) | (1 << (ABAPCDSParser.T__102 - 84)) | (1 << (ABAPCDSParser.T__103 - 84)) | (1 << (ABAPCDSParser.T__104 - 84)))) !== 0))) {
+			if (!(((((_la - 52)) & ~0x1F) === 0 && ((1 << (_la - 52)) & ((1 << (ABAPCDSParser.T__51 - 52)) | (1 << (ABAPCDSParser.T__52 - 52)) | (1 << (ABAPCDSParser.T__53 - 52)) | (1 << (ABAPCDSParser.T__54 - 52)) | (1 << (ABAPCDSParser.T__55 - 52)) | (1 << (ABAPCDSParser.T__56 - 52)) | (1 << (ABAPCDSParser.T__57 - 52)) | (1 << (ABAPCDSParser.T__58 - 52)) | (1 << (ABAPCDSParser.T__59 - 52)) | (1 << (ABAPCDSParser.T__60 - 52)) | (1 << (ABAPCDSParser.T__61 - 52)) | (1 << (ABAPCDSParser.T__62 - 52)) | (1 << (ABAPCDSParser.T__63 - 52)) | (1 << (ABAPCDSParser.T__64 - 52)) | (1 << (ABAPCDSParser.T__65 - 52)) | (1 << (ABAPCDSParser.T__66 - 52)) | (1 << (ABAPCDSParser.T__67 - 52)) | (1 << (ABAPCDSParser.T__68 - 52)) | (1 << (ABAPCDSParser.T__69 - 52)) | (1 << (ABAPCDSParser.T__70 - 52)) | (1 << (ABAPCDSParser.T__71 - 52)) | (1 << (ABAPCDSParser.T__72 - 52)) | (1 << (ABAPCDSParser.T__73 - 52)) | (1 << (ABAPCDSParser.T__74 - 52)) | (1 << (ABAPCDSParser.T__75 - 52)) | (1 << (ABAPCDSParser.T__76 - 52)) | (1 << (ABAPCDSParser.T__77 - 52)) | (1 << (ABAPCDSParser.T__78 - 52)) | (1 << (ABAPCDSParser.T__79 - 52)) | (1 << (ABAPCDSParser.T__80 - 52)) | (1 << (ABAPCDSParser.T__81 - 52)) | (1 << (ABAPCDSParser.T__82 - 52)))) !== 0) || ((((_la - 84)) & ~0x1F) === 0 && ((1 << (_la - 84)) & ((1 << (ABAPCDSParser.T__83 - 84)) | (1 << (ABAPCDSParser.T__84 - 84)) | (1 << (ABAPCDSParser.T__85 - 84)) | (1 << (ABAPCDSParser.T__86 - 84)) | (1 << (ABAPCDSParser.T__87 - 84)) | (1 << (ABAPCDSParser.T__88 - 84)) | (1 << (ABAPCDSParser.T__89 - 84)) | (1 << (ABAPCDSParser.T__90 - 84)) | (1 << (ABAPCDSParser.T__91 - 84)) | (1 << (ABAPCDSParser.T__92 - 84)) | (1 << (ABAPCDSParser.T__93 - 84)) | (1 << (ABAPCDSParser.T__94 - 84)) | (1 << (ABAPCDSParser.T__95 - 84)) | (1 << (ABAPCDSParser.T__96 - 84)) | (1 << (ABAPCDSParser.T__97 - 84)) | (1 << (ABAPCDSParser.T__98 - 84)) | (1 << (ABAPCDSParser.T__99 - 84)) | (1 << (ABAPCDSParser.T__100 - 84)))) !== 0) || _la === ABAPCDSParser.LEFT || _la === ABAPCDSParser.RIGHT)) {
 			this._errHandler.recoverInline(this);
 			} else {
 				if (this._input.LA(1) === Token.EOF) {
@@ -2659,13 +2653,11 @@ export class ABAPCDSParser extends Parser {
 			case ABAPCDSParser.T__98:
 			case ABAPCDSParser.T__99:
 			case ABAPCDSParser.T__100:
-			case ABAPCDSParser.T__101:
 			case ABAPCDSParser.T__102:
-			case ABAPCDSParser.T__103:
-			case ABAPCDSParser.T__104:
-			case ABAPCDSParser.T__106:
 			case ABAPCDSParser.CASE:
 			case ABAPCDSParser.CAST:
+			case ABAPCDSParser.LEFT:
+			case ABAPCDSParser.RIGHT:
 			case ABAPCDSParser.NUMBER:
 			case ABAPCDSParser.IDENTIFIER:
 			case ABAPCDSParser.ANNOTATIONSEPERATOR:
@@ -2676,11 +2668,11 @@ export class ABAPCDSParser extends Parser {
 				this.field();
 				}
 				break;
-			case ABAPCDSParser.T__105:
+			case ABAPCDSParser.T__101:
 				this.enterOuterAlt(_localctx, 2);
 				{
 				this.state = 529;
-				this.match(ABAPCDSParser.T__105);
+				this.match(ABAPCDSParser.T__101);
 				}
 				break;
 			default:
@@ -2760,10 +2752,8 @@ export class ABAPCDSParser extends Parser {
 			case ABAPCDSParser.T__98:
 			case ABAPCDSParser.T__99:
 			case ABAPCDSParser.T__100:
-			case ABAPCDSParser.T__101:
-			case ABAPCDSParser.T__102:
-			case ABAPCDSParser.T__103:
-			case ABAPCDSParser.T__104:
+			case ABAPCDSParser.LEFT:
+			case ABAPCDSParser.RIGHT:
 				this.enterOuterAlt(_localctx, 1);
 				{
 				this.state = 532;
@@ -2792,11 +2782,11 @@ export class ABAPCDSParser extends Parser {
 				this.match(ABAPCDSParser.T__2);
 				}
 				break;
-			case ABAPCDSParser.T__106:
+			case ABAPCDSParser.T__102:
 				this.enterOuterAlt(_localctx, 2);
 				{
 				this.state = 544;
-				this.match(ABAPCDSParser.T__106);
+				this.match(ABAPCDSParser.T__102);
 				this.state = 545;
 				this.arg();
 				this.state = 546;
@@ -2941,7 +2931,7 @@ export class ABAPCDSParser extends Parser {
 			{
 			this.state = 562;
 			_la = this._input.LA(1);
-			if (!(_la === ABAPCDSParser.T__13 || _la === ABAPCDSParser.T__107)) {
+			if (!(_la === ABAPCDSParser.T__13 || _la === ABAPCDSParser.T__103)) {
 			this._errHandler.recoverInline(this);
 			} else {
 				if (this._input.LA(1) === Token.EOF) {
@@ -3492,13 +3482,11 @@ export class ABAPCDSParser extends Parser {
 			case ABAPCDSParser.T__98:
 			case ABAPCDSParser.T__99:
 			case ABAPCDSParser.T__100:
-			case ABAPCDSParser.T__101:
 			case ABAPCDSParser.T__102:
-			case ABAPCDSParser.T__103:
-			case ABAPCDSParser.T__104:
-			case ABAPCDSParser.T__106:
 			case ABAPCDSParser.CASE:
 			case ABAPCDSParser.CAST:
+			case ABAPCDSParser.LEFT:
+			case ABAPCDSParser.RIGHT:
 			case ABAPCDSParser.NUMBER:
 			case ABAPCDSParser.IDENTIFIER:
 			case ABAPCDSParser.ANNOTATIONSEPERATOR:
@@ -3659,7 +3647,7 @@ export class ABAPCDSParser extends Parser {
 
 	private static readonly _serializedATNSegments: number = 2;
 	private static readonly _serializedATNSegment0: string =
-		"\x03\uC91D\uCABA\u058D\uAFBA\u4F53\u0607\uEA8B\uC241\x03\xA5\u0296\x04" +
+		"\x03\uC91D\uCABA\u058D\uAFBA\u4F53\u0607\uEA8B\uC241\x03\xA1\u0296\x04" +
 		"\x02\t\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06\x04" +
 		"\x07\t\x07\x04\b\t\b\x04\t\t\t\x04\n\t\n\x04\v\t\v\x04\f\t\f\x04\r\t\r" +
 		"\x04\x0E\t\x0E\x04\x0F\t\x0F\x04\x10\t\x10\x04\x11\t\x11\x04\x12\t\x12" +
@@ -3731,69 +3719,69 @@ export class ABAPCDSParser extends Parser {
 		"\x18\x02\x1A\x02\x1C\x02\x1E\x02 \x02\"\x02$\x02&\x02(\x02*\x02,\x02." +
 		"\x020\x022\x024\x026\x028\x02:\x02<\x02>\x02@\x02B\x02D\x02F\x02H\x02" +
 		"J\x02L\x02N\x02P\x02R\x02T\x02V\x02X\x02Z\x02\\\x02^\x02`\x02b\x02d\x02" +
-		"f\x02h\x02j\x02l\x02\x02\v\x03\x02\x97\x98\x03\x02\x06\v\x03\x02\x8D\x8E" +
-		"\x03\x02\x10\x11\x04\x02\x11\x11\x13\x13\x04\x02\x10\x10\xA0\xA0\x03\x02" +
-		"25\x03\x026k\x04\x02\x10\x10nn\x02\u02D2\x02p\x03\x02\x02\x02\x04r\x03" +
-		"\x02\x02\x02\x06\x82\x03\x02\x02\x02\b\x8C\x03\x02\x02\x02\n\x8E\x03\x02" +
-		"\x02\x02\f\x9E\x03\x02\x02\x02\x0E\xAE\x03\x02\x02\x02\x10\xB0\x03\x02" +
-		"\x02\x02\x12\xB2\x03\x02\x02\x02\x14\xB4\x03\x02\x02\x02\x16\xB7\x03\x02" +
-		"\x02\x02\x18\xC0\x03\x02\x02\x02\x1A\xDA\x03\x02\x02\x02\x1C\xF4\x03\x02" +
-		"\x02\x02\x1E\xF6\x03\x02\x02\x02 \xFE\x03\x02\x02\x02\"\u011F\x03\x02" +
-		"\x02\x02$\u0121\x03\x02\x02\x02&\u0142\x03\x02\x02\x02(\u0144\x03\x02" +
-		"\x02\x02*\u0187\x03\x02\x02\x02,\u0189\x03\x02\x02\x02.\u018D\x03\x02" +
-		"\x02\x020\u0192\x03\x02\x02\x022\u019E\x03\x02\x02\x024\u01AB\x03\x02" +
-		"\x02\x026\u01B8\x03\x02\x02\x028\u01C1\x03\x02\x02\x02:\u01C3\x03\x02" +
-		"\x02\x02<\u01E1\x03\x02\x02\x02>\u01FC\x03\x02\x02\x02@\u01FE\x03\x02" +
-		"\x02\x02B\u020C\x03\x02\x02\x02D\u020E\x03\x02\x02\x02F\u0210\x03\x02" +
-		"\x02\x02H\u0214\x03\x02\x02\x02J\u0228\x03\x02\x02\x02L\u022C\x03\x02" +
-		"\x02\x02N\u022E\x03\x02\x02\x02P\u0232\x03\x02\x02\x02R\u0234\x03\x02" +
-		"\x02\x02T\u0238\x03\x02\x02\x02V\u023A\x03\x02\x02\x02X\u0247\x03\x02" +
-		"\x02\x02Z\u0249\x03\x02\x02\x02\\\u024E\x03\x02\x02\x02^\u0251\x03\x02" +
-		"\x02\x02`\u025E\x03\x02\x02\x02b\u0275\x03\x02\x02\x02d\u0277\x03\x02" +
-		"\x02\x02f\u027C\x03\x02\x02\x02h\u027E\x03\x02\x02\x02j\u0286\x03\x02" +
-		"\x02\x02l\u0290\x03\x02\x02\x02nq\x05@!\x02oq\x054\x1B\x02pn\x03\x02\x02" +
-		"\x02po\x03\x02\x02\x02q\x03\x03\x02\x02\x02rs\x07\xA1\x02\x02s\x05\x03" +
-		"\x02\x02\x02tv\x07\x94\x02\x02ut\x03\x02\x02\x02uv\x03\x02\x02\x02vw\x03" +
-		"\x02\x02\x02w\x83\x07\x95\x02\x02xy\t\x02\x02\x02y}\x07\x96\x02\x02z{" +
-		"\x07\x85\x02\x02{~\x07\x99\x02\x02|~\x07\x9A\x02\x02}z\x03\x02\x02\x02" +
-		"}|\x03\x02\x02\x02}~\x03\x02\x02\x02~\x7F\x03\x02\x02\x02\x7F\x83\x07" +
-		"\x95\x02\x02\x80\x81\x07\x9B\x02\x02\x81\x83\x07\x95\x02\x02\x82u\x03" +
-		"\x02\x02\x02\x82x\x03\x02\x02\x02\x82\x80\x03\x02\x02\x02\x83\x84\x03" +
-		"\x02\x02\x02\x84\x87\x05\f\x07\x02\x85\x86\x07\x8B\x02\x02\x86\x88\x05" +
-		"\x1C\x0F\x02\x87\x85\x03\x02\x02\x02\x87\x88\x03\x02\x02\x02\x88\x07\x03" +
-		"\x02\x02\x02\x89\x8D\x05P)\x02\x8A\x8D\x05B\"\x02\x8B\x8D\x05D#\x02\x8C" +
-		"\x89\x03\x02\x02\x02\x8C\x8A\x03\x02\x02\x02\x8C\x8B\x03\x02\x02\x02\x8D" +
-		"\t\x03\x02\x02\x02\x8E\x96\x07\x03\x02\x02\x8F\x90\x05(\x15\x02\x90\x91" +
-		"\x07\xA4\x02\x02\x91\x92\x05\b\x05\x02\x92\x93\x07\x04\x02\x02\x93\x95" +
-		"\x03\x02\x02\x02\x94\x8F\x03\x02\x02\x02\x95\x98\x03\x02\x02\x02\x96\x94" +
-		"\x03\x02\x02\x02\x96\x97\x03\x02\x02\x02\x97\x99\x03\x02\x02\x02\x98\x96" +
-		"\x03\x02\x02\x02\x99\x9A\x05(\x15\x02\x9A\x9B\x07\xA4\x02\x02\x9B\x9C" +
-		"\x05\b\x05\x02\x9C\x9D\x07\x05\x02\x02\x9D\v\x03\x02\x02\x02\x9E\xA0\x07" +
-		"\xA1\x02\x02\x9F\xA1\x05\n\x06\x02\xA0\x9F\x03\x02\x02\x02\xA0\xA1\x03" +
-		"\x02\x02\x02\xA1\xA6\x03\x02\x02\x02\xA2\xA4\x07r\x02\x02\xA3\xA2\x03" +
-		"\x02\x02\x02\xA3\xA4\x03\x02\x02\x02\xA4\xA5\x03\x02\x02\x02\xA5\xA7\x05" +
-		"\x04\x03\x02\xA6\xA3\x03\x02\x02\x02\xA6\xA7\x03\x02\x02\x02\xA7\xAB\x03" +
-		"\x02\x02\x02\xA8\xAA\x05\x06\x04\x02\xA9\xA8\x03\x02\x02\x02\xAA\xAD\x03" +
-		"\x02\x02\x02\xAB\xA9\x03\x02\x02\x02\xAB\xAC\x03\x02\x02\x02\xAC\r\x03" +
-		"\x02\x02\x02\xAD\xAB\x03\x02\x02\x02\xAE\xAF\x07\xA1\x02\x02\xAF\x0F\x03" +
-		"\x02\x02\x02\xB0\xB1\x07\xA1\x02\x02\xB1\x11\x03\x02\x02\x02\xB2\xB3\t" +
-		"\x03\x02\x02\xB3\x13\x03\x02\x02\x02\xB4\xB5\x07\f\x02\x02\xB5\xB6\x05" +
-		"V,\x02\xB6\x15\x03\x02\x02\x02\xB7\xB8\x07\r\x02\x02\xB8\xB9\x07\xA1\x02" +
-		"\x02\xB9\xBA\x07\x0E\x02\x02\xBA\xBB\x07\xA5\x02\x02\xBB\x17\x03\x02\x02" +
+		"f\x02h\x02j\x02l\x02\x02\v\x03\x02\x93\x94\x03\x02\x06\v\x03\x02\x89\x8A" +
+		"\x03\x02\x10\x11\x04\x02\x11\x11\x13\x13\x04\x02\x10\x10\x9C\x9C\x03\x02" +
+		"25\x04\x026g\x93\x94\x04\x02\x10\x10jj\x02\u02D2\x02p\x03\x02\x02\x02" +
+		"\x04r\x03\x02\x02\x02\x06\x82\x03\x02\x02\x02\b\x8C\x03\x02\x02\x02\n" +
+		"\x8E\x03\x02\x02\x02\f\x9E\x03\x02\x02\x02\x0E\xAE\x03\x02\x02\x02\x10" +
+		"\xB0\x03\x02\x02\x02\x12\xB2\x03\x02\x02\x02\x14\xB4\x03\x02\x02\x02\x16" +
+		"\xB7\x03\x02\x02\x02\x18\xC0\x03\x02\x02\x02\x1A\xDA\x03\x02\x02\x02\x1C" +
+		"\xF4\x03\x02\x02\x02\x1E\xF6\x03\x02\x02\x02 \xFE\x03\x02\x02\x02\"\u011F" +
+		"\x03\x02\x02\x02$\u0121\x03\x02\x02\x02&\u0142\x03\x02\x02\x02(\u0144" +
+		"\x03\x02\x02\x02*\u0187\x03\x02\x02\x02,\u0189\x03\x02\x02\x02.\u018D" +
+		"\x03\x02\x02\x020\u0192\x03\x02\x02\x022\u019E\x03\x02\x02\x024\u01AB" +
+		"\x03\x02\x02\x026\u01B8\x03\x02\x02\x028\u01C1\x03\x02\x02\x02:\u01C3" +
+		"\x03\x02\x02\x02<\u01E1\x03\x02\x02\x02>\u01FC\x03\x02\x02\x02@\u01FE" +
+		"\x03\x02\x02\x02B\u020C\x03\x02\x02\x02D\u020E\x03\x02\x02\x02F\u0210" +
+		"\x03\x02\x02\x02H\u0214\x03\x02\x02\x02J\u0228\x03\x02\x02\x02L\u022C" +
+		"\x03\x02\x02\x02N\u022E\x03\x02\x02\x02P\u0232\x03\x02\x02\x02R\u0234" +
+		"\x03\x02\x02\x02T\u0238\x03\x02\x02\x02V\u023A\x03\x02\x02\x02X\u0247" +
+		"\x03\x02\x02\x02Z\u0249\x03\x02\x02\x02\\\u024E\x03\x02\x02\x02^\u0251" +
+		"\x03\x02\x02\x02`\u025E\x03\x02\x02\x02b\u0275\x03\x02\x02\x02d\u0277" +
+		"\x03\x02\x02\x02f\u027C\x03\x02\x02\x02h\u027E\x03\x02\x02\x02j\u0286" +
+		"\x03\x02\x02\x02l\u0290\x03\x02\x02\x02nq\x05@!\x02oq\x054\x1B\x02pn\x03" +
+		"\x02\x02\x02po\x03\x02\x02\x02q\x03\x03\x02\x02\x02rs\x07\x9D\x02\x02" +
+		"s\x05\x03\x02\x02\x02tv\x07\x90\x02\x02ut\x03\x02\x02\x02uv\x03\x02\x02" +
+		"\x02vw\x03\x02\x02\x02w\x83\x07\x91\x02\x02xy\t\x02\x02\x02y}\x07\x92" +
+		"\x02\x02z{\x07\x81\x02\x02{~\x07\x95\x02\x02|~\x07\x96\x02\x02}z\x03\x02" +
+		"\x02\x02}|\x03\x02\x02\x02}~\x03\x02\x02\x02~\x7F\x03\x02\x02\x02\x7F" +
+		"\x83\x07\x91\x02\x02\x80\x81\x07\x97\x02\x02\x81\x83\x07\x91\x02\x02\x82" +
+		"u\x03\x02\x02\x02\x82x\x03\x02\x02\x02\x82\x80\x03\x02\x02\x02\x83\x84" +
+		"\x03\x02\x02\x02\x84\x87\x05\f\x07\x02\x85\x86\x07\x87\x02\x02\x86\x88" +
+		"\x05\x1C\x0F\x02\x87\x85\x03\x02\x02\x02\x87\x88\x03\x02\x02\x02\x88\x07" +
+		"\x03\x02\x02\x02\x89\x8D\x05P)\x02\x8A\x8D\x05B\"\x02\x8B\x8D\x05D#\x02" +
+		"\x8C\x89\x03\x02\x02\x02\x8C\x8A\x03\x02\x02\x02\x8C\x8B\x03\x02\x02\x02" +
+		"\x8D\t\x03\x02\x02\x02\x8E\x96\x07\x03\x02\x02\x8F\x90\x05(\x15\x02\x90" +
+		"\x91\x07\xA0\x02\x02\x91\x92\x05\b\x05\x02\x92\x93\x07\x04\x02\x02\x93" +
+		"\x95\x03\x02\x02\x02\x94\x8F\x03\x02\x02\x02\x95\x98\x03\x02\x02\x02\x96" +
+		"\x94\x03\x02\x02\x02\x96\x97\x03\x02\x02\x02\x97\x99\x03\x02\x02\x02\x98" +
+		"\x96\x03\x02\x02\x02\x99\x9A\x05(\x15\x02\x9A\x9B\x07\xA0\x02\x02\x9B" +
+		"\x9C\x05\b\x05\x02\x9C\x9D\x07\x05\x02\x02\x9D\v\x03\x02\x02\x02\x9E\xA0" +
+		"\x07\x9D\x02\x02\x9F\xA1\x05\n\x06\x02\xA0\x9F\x03\x02\x02\x02\xA0\xA1" +
+		"\x03\x02\x02\x02\xA1\xA6\x03\x02\x02\x02\xA2\xA4\x07n\x02\x02\xA3\xA2" +
+		"\x03\x02\x02\x02\xA3\xA4\x03\x02\x02\x02\xA4\xA5\x03\x02\x02\x02\xA5\xA7" +
+		"\x05\x04\x03\x02\xA6\xA3\x03\x02\x02\x02\xA6\xA7\x03\x02\x02\x02\xA7\xAB" +
+		"\x03\x02\x02\x02\xA8\xAA\x05\x06\x04\x02\xA9\xA8\x03\x02\x02\x02\xAA\xAD" +
+		"\x03\x02\x02\x02\xAB\xA9\x03\x02\x02\x02\xAB\xAC\x03\x02\x02\x02\xAC\r" +
+		"\x03\x02\x02\x02\xAD\xAB\x03\x02\x02\x02\xAE\xAF\x07\x9D\x02\x02\xAF\x0F" +
+		"\x03\x02\x02\x02\xB0\xB1\x07\x9D\x02\x02\xB1\x11\x03\x02\x02\x02\xB2\xB3" +
+		"\t\x03\x02\x02\xB3\x13\x03\x02\x02\x02\xB4\xB5\x07\f\x02\x02\xB5\xB6\x05" +
+		"V,\x02\xB6\x15\x03\x02\x02\x02\xB7\xB8\x07\r\x02\x02\xB8\xB9\x07\x9D\x02" +
+		"\x02\xB9\xBA\x07\x0E\x02\x02\xBA\xBB\x07\xA1\x02\x02\xBB\x17\x03\x02\x02" +
 		"\x02\xBC\xC1\x05V,\x02\xBD\xC1\x05L\'\x02\xBE\xC1\x05B\"\x02\xBF\xC1\x05" +
 		"\x14\v\x02\xC0\xBC\x03\x02\x02\x02\xC0\xBD\x03\x02\x02\x02\xC0\xBE\x03" +
 		"\x02\x02\x02\xC0\xBF\x03\x02\x02\x02\xC1\x19\x03\x02\x02\x02\xC2\xC3\x05" +
 		"\x18\r\x02\xC3\xC4\x05\x12\n\x02\xC4\xC5\x05\x18\r\x02\xC5\xDB\x03\x02" +
-		"\x02\x02\xC6\xC7\x05\x18\r\x02\xC7\xC8\x07\x8F\x02\x02\xC8\xC9\x05\x18" +
-		"\r\x02\xC9\xCA\x07\x8D\x02\x02\xCA\xCB\x05\x18\r\x02\xCB\xDB\x03\x02\x02" +
-		"\x02\xCC\xCD\x05\x18\r\x02\xCD\xCE\x07\x90\x02\x02\xCE\xD1\x07\xA5\x02" +
-		"\x02\xCF\xD0\x07\x91\x02\x02\xD0\xD2\x07\xA5\x02\x02\xD1\xCF\x03\x02\x02" +
+		"\x02\x02\xC6\xC7\x05\x18\r\x02\xC7\xC8\x07\x8B\x02\x02\xC8\xC9\x05\x18" +
+		"\r\x02\xC9\xCA\x07\x89\x02\x02\xCA\xCB\x05\x18\r\x02\xCB\xDB\x03\x02\x02" +
+		"\x02\xCC\xCD\x05\x18\r\x02\xCD\xCE\x07\x8C\x02\x02\xCE\xD1\x07\xA1\x02" +
+		"\x02\xCF\xD0\x07\x8D\x02\x02\xD0\xD2\x07\xA1\x02\x02\xD1\xCF\x03\x02\x02" +
 		"\x02\xD1\xD2\x03\x02\x02\x02\xD2\xDB\x03\x02\x02\x02\xD3\xD4\x05\x18\r" +
-		"\x02\xD4\xD6\x07\x92\x02\x02\xD5\xD7\x07\x8C\x02\x02\xD6\xD5\x03\x02\x02" +
-		"\x02\xD6\xD7\x03\x02\x02\x02\xD7\xD8\x03\x02\x02\x02\xD8\xD9\x07\x93\x02" +
+		"\x02\xD4\xD6\x07\x8E\x02\x02\xD5\xD7\x07\x88\x02\x02\xD6\xD5\x03\x02\x02" +
+		"\x02\xD6\xD7\x03\x02\x02\x02\xD7\xD8\x03\x02\x02\x02\xD8\xD9\x07\x8F\x02" +
 		"\x02\xD9\xDB\x03\x02\x02\x02\xDA\xC2\x03\x02\x02\x02\xDA\xC6\x03\x02\x02" +
 		"\x02\xDA\xCC\x03\x02\x02\x02\xDA\xD3\x03\x02\x02\x02\xDB\x1B\x03\x02\x02" +
-		"\x02\xDC\xF5\x05\x1A\x0E\x02\xDD\xDE\x07\x8C\x02\x02\xDE\xF5\x05\x1A\x0E" +
+		"\x02\xDC\xF5\x05\x1A\x0E\x02\xDD\xDE\x07\x88\x02\x02\xDE\xF5\x05\x1A\x0E" +
 		"\x02\xDF\xE2\x05\x1A\x0E\x02\xE0\xE1\t\x04\x02\x02\xE1\xE3\x05\x1A\x0E" +
 		"\x02\xE2\xE0\x03\x02\x02\x02\xE3\xE4\x03\x02\x02\x02\xE4\xE2\x03\x02\x02" +
 		"\x02\xE4\xE5\x03\x02\x02\x02\xE5\xF5\x03\x02\x02\x02\xE6\xE7\x07\x03\x02" +
@@ -3806,29 +3794,29 @@ export class ABAPCDSParser extends Parser {
 		"\x02\xF4\xEA\x03\x02\x02\x02\xF5\x1D\x03\x02\x02\x02\xF6\xF9\x07\x0F\x02" +
 		"\x02\xF7\xF8\t\x05\x02\x02\xF8\xFA\x07\x12\x02\x02\xF9\xF7\x03\x02\x02" +
 		"\x02\xF9\xFA\x03\x02\x02\x02\xFA\xFB\x03\x02\x02\x02\xFB\xFC\t\x06\x02" +
-		"\x02\xFC\xFD\x07\x14\x02\x02\xFD\x1F\x03\x02\x02\x02\xFE\u0100\x07\x8A" +
+		"\x02\xFC\xFD\x07\x14\x02\x02\xFD\x1F\x03\x02\x02\x02\xFE\u0100\x07\x86" +
 		"\x02\x02\xFF\u0101\x05\x1E\x10\x02\u0100\xFF\x03\x02\x02\x02\u0100\u0101" +
-		"\x03\x02\x02\x02\u0101\u0102\x03\x02\x02\x02\u0102\u0103\x07\x85\x02\x02" +
-		"\u0103\u0106\x05\x0E\b\x02\u0104\u0105\x07r\x02\x02\u0105\u0107\x05\x10" +
+		"\x03\x02\x02\x02\u0101\u0102\x03\x02\x02\x02\u0102\u0103\x07\x81\x02\x02" +
+		"\u0103\u0106\x05\x0E\b\x02\u0104\u0105\x07n\x02\x02\u0105\u0107\x05\x10" +
 		"\t\x02\u0106\u0104\x03\x02\x02\x02\u0106\u0107\x03\x02\x02\x02\u0107\u0108" +
-		"\x03\x02\x02\x02\u0108\u0109\x07\x8B\x02\x02\u0109\u010E\x05\x1C\x0F\x02" +
-		"\u010A\u010B\x07\x86\x02\x02\u010B\u010C\x07\x88\x02\x02\u010C\u010D\x07" +
-		"\x89\x02\x02\u010D\u010F\x05\x1C\x0F\x02\u010E\u010A\x03\x02\x02\x02\u010E" +
-		"\u010F\x03\x02\x02\x02\u010F!\x03\x02\x02\x02\u0110\u0111\x07u\x02\x02" +
-		"\u0111\u0120\x05\x1C\x0F\x02\u0112\u0114\x07v\x02\x02\u0113\u0115\x05" +
+		"\x03\x02\x02\x02\u0108\u0109\x07\x87\x02\x02\u0109\u010E\x05\x1C\x0F\x02" +
+		"\u010A\u010B\x07\x82\x02\x02\u010B\u010C\x07\x84\x02\x02\u010C\u010D\x07" +
+		"\x85\x02\x02\u010D\u010F\x05\x1C\x0F\x02\u010E\u010A\x03\x02\x02\x02\u010E" +
+		"\u010F\x03\x02\x02\x02\u010F!\x03\x02\x02\x02\u0110\u0111\x07q\x02\x02" +
+		"\u0111\u0120\x05\x1C\x0F\x02\u0112\u0114\x07r\x02\x02\u0113\u0115\x05" +
 		"V,\x02\u0114\u0113\x03\x02\x02\x02\u0115\u0116\x03\x02\x02\x02\u0116\u0114" +
 		"\x03\x02\x02\x02\u0116\u0117\x03\x02\x02\x02\u0117\u0120\x03\x02\x02\x02" +
-		"\u0118\u0119\x07w\x02\x02\u0119\u0120\x05\x1C\x0F\x02\u011A\u011C\x07" +
-		"x\x02\x02\u011B\u011D\x07y\x02\x02\u011C\u011B\x03\x02\x02\x02\u011C\u011D" +
+		"\u0118\u0119\x07s\x02\x02\u0119\u0120\x05\x1C\x0F\x02\u011A\u011C\x07" +
+		"t\x02\x02\u011B\u011D\x07u\x02\x02\u011C\u011B\x03\x02\x02\x02\u011C\u011D" +
 		"\x03\x02\x02\x02\u011D\u011E\x03\x02\x02\x02\u011E\u0120\x05$\x13\x02" +
 		"\u011F\u0110\x03\x02\x02\x02\u011F\u0112\x03\x02\x02\x02\u011F\u0118\x03" +
 		"\x02\x02\x02\u011F\u011A\x03\x02\x02\x02\u0120#\x03\x02\x02\x02\u0121" +
-		"\u0123\x07s\x02\x02\u0122\u0124\x07\x84\x02\x02\u0123\u0122\x03\x02\x02" +
+		"\u0123\x07o\x02\x02\u0122\u0124\x07\x80\x02\x02\u0123\u0122\x03\x02\x02" +
 		"\x02\u0123\u0124\x03\x02\x02\x02\u0124\u013A\x03\x02\x02\x02\u0125\u0126" +
-		"\x05l7\x02\u0126\u0127\x07t\x02\x02\u0127\u012B\x05\f\x07\x02\u0128\u012A" +
+		"\x05l7\x02\u0126\u0127\x07p\x02\x02\u0127\u012B\x05\f\x07\x02\u0128\u012A" +
 		"\x05 \x11\x02\u0129\u0128\x03\x02\x02\x02\u012A\u012D\x03\x02\x02\x02" +
 		"\u012B\u0129\x03\x02\x02\x02\u012B\u012C\x03\x02\x02\x02\u012C\u013B\x03" +
-		"\x02\x02\x02\u012D\u012B\x03\x02\x02\x02\u012E\u012F\x07t\x02\x02\u012F" +
+		"\x02\x02\x02\u012D\u012B\x03\x02\x02\x02\u012E\u012F\x07p\x02\x02\u012F" +
 		"\u0133\x05\f\x07\x02\u0130\u0132\x05 \x11\x02\u0131\u0130\x03\x02\x02" +
 		"\x02\u0132\u0135\x03\x02\x02\x02\u0133\u0131\x03\x02\x02\x02\u0133\u0134" +
 		"\x03\x02\x02\x02\u0134\u0136\x03\x02\x02\x02\u0135\u0133\x03\x02\x02\x02" +
@@ -3838,15 +3826,15 @@ export class ABAPCDSParser extends Parser {
 		"\x02\u013D\u013C\x03\x02\x02\x02\u013E\u0141\x03\x02\x02\x02\u013F\u013D" +
 		"\x03\x02\x02\x02\u013F\u0140\x03\x02\x02\x02\u0140%\x03\x02\x02\x02\u0141" +
 		"\u013F\x03\x02\x02\x02\u0142\u0143\x05@!\x02\u0143\'\x03\x02\x02\x02\u0144" +
-		"\u0145\x07\xA1\x02\x02\u0145)\x03\x02\x02\x02\u0146\u0147\x07\x17\x02" +
-		"\x02\u0147\u0148\x07\x9F\x02\x02\u0148\u0188\x07\x05\x02\x02\u0149\u014B" +
+		"\u0145\x07\x9D\x02\x02\u0145)\x03\x02\x02\x02\u0146\u0147\x07\x17\x02" +
+		"\x02\u0147\u0148\x07\x9B\x02\x02\u0148\u0188\x07\x05\x02\x02\u0149\u014B" +
 		"\x07\x18\x02\x02\u014A\u014C\x07\x19\x02\x02\u014B\u014A\x03\x02\x02\x02" +
 		"\u014B\u014C\x03\x02\x02\x02\u014C\u0188\x03\x02\x02\x02\u014D\u0188\x07" +
-		"\x1A\x02\x02\u014E\u014F\x07\x1B\x02\x02\u014F\u0150\x07\x9F\x02\x02\u0150" +
-		"\u0151\x07\x04\x02\x02\u0151\u0152\x07\xA0\x02\x02\u0152\u0188\x07\x05" +
+		"\x1A\x02\x02\u014E\u014F\x07\x1B\x02\x02\u014F\u0150\x07\x9B\x02\x02\u0150" +
+		"\u0151\x07\x04\x02\x02\u0151\u0152\x07\x9C\x02\x02\u0152\u0188\x07\x05" +
 		"\x02\x02\u0153\u0155\x07\x1C\x02\x02\u0154\u0156\x07\x1D\x02\x02\u0155" +
 		"\u0154\x03\x02\x02\x02\u0155\u0156\x03\x02\x02\x02\u0156\u0188\x03\x02" +
-		"\x02\x02\u0157\u0158\x07\x1E\x02\x02\u0158\u0159\x07\x9E\x02\x02\u0159" +
+		"\x02\x02\u0157\u0158\x07\x1E\x02\x02\u0158\u0159\x07\x9A\x02\x02\u0159" +
 		"\u015A\x07\x04\x02\x02\u015A\u015B\t\x07\x02\x02\u015B\u0188\x07\x05\x02" +
 		"\x02\u015C\u015E\x07\x1F\x02\x02\u015D\u015F\x07 \x02\x02\u015E\u015D" +
 		"\x03\x02\x02\x02\u015E\u015F\x03\x02\x02\x02\u015F\u0188\x03\x02\x02\x02" +
@@ -3860,11 +3848,11 @@ export class ABAPCDSParser extends Parser {
 		"\x03\x02\x02\x02\u016F\u0188\x03\x02\x02\x02\u0170\u0172\x07(\x02\x02" +
 		"\u0171\u0173\x07)\x02\x02\u0172\u0171\x03\x02\x02\x02\u0172\u0173\x03" +
 		"\x02\x02\x02\u0173\u0188\x03\x02\x02\x02\u0174\u0175\x07*\x02\x02\u0175" +
-		"\u0176\x07\x9F\x02\x02\u0176\u0188\x07\x05\x02\x02\u0177\u0178\x07+\x02" +
-		"\x02\u0178\u0179\x07\x9F\x02\x02\u0179\u017A\x07\x04\x02\x02\u017A\u017B" +
-		"\x07\xA0\x02\x02\u017B\u0188\x07\x05\x02\x02\u017C\u017D\x07,\x02\x02" +
-		"\u017D\u017E\x07\x9F\x02\x02\u017E\u0188\x07\x05\x02\x02\u017F\u0180\x07" +
-		"-\x02\x02\u0180\u0181\x07\x9F\x02\x02\u0181\u0188\x07\x05\x02\x02\u0182" +
+		"\u0176\x07\x9B\x02\x02\u0176\u0188\x07\x05\x02\x02\u0177\u0178\x07+\x02" +
+		"\x02\u0178\u0179\x07\x9B\x02\x02\u0179\u017A\x07\x04\x02\x02\u017A\u017B" +
+		"\x07\x9C\x02\x02\u017B\u0188\x07\x05\x02\x02\u017C\u017D\x07,\x02\x02" +
+		"\u017D\u017E\x07\x9B\x02\x02\u017E\u0188\x07\x05\x02\x02\u017F\u0180\x07" +
+		"-\x02\x02\u0180\u0181\x07\x9B\x02\x02\u0181\u0188\x07\x05\x02\x02\u0182" +
 		"\u0184\x07.\x02\x02\u0183\u0185\x07/\x02\x02\u0184\u0183\x03\x02\x02\x02" +
 		"\u0184\u0185\x03\x02\x02\x02\u0185\u0188\x03\x02\x02\x02\u0186\u0188\x07" +
 		"0\x02\x02\u0187\u0146\x03\x02\x02\x02\u0187\u0149\x03\x02\x02\x02\u0187" +
@@ -3874,37 +3862,37 @@ export class ABAPCDSParser extends Parser {
 		"\x02\x02\u0187\u016C\x03\x02\x02\x02\u0187\u0170\x03\x02\x02\x02\u0187" +
 		"\u0174\x03\x02\x02\x02\u0187\u0177\x03\x02\x02\x02\u0187\u017C\x03\x02" +
 		"\x02\x02\u0187\u017F\x03\x02\x02\x02\u0187\u0182\x03\x02\x02\x02\u0187" +
-		"\u0186\x03\x02\x02\x02\u0188+\x03\x02\x02\x02\u0189\u018A\x07\xA1\x02" +
+		"\u0186\x03\x02\x02\x02\u0188+\x03\x02\x02\x02\u0189\u018A\x07\x9D\x02" +
 		"\x02\u018A-\x03\x02\x02\x02\u018B\u018E\x05*\x16\x02\u018C\u018E\x05," +
 		"\x17\x02\u018D\u018B\x03\x02\x02\x02\u018D\u018C\x03\x02\x02\x02\u018E" +
 		"/\x03\x02\x02\x02\u018F\u0191\x05&\x14\x02\u0190\u018F\x03\x02\x02\x02" +
 		"\u0191\u0194\x03\x02\x02\x02\u0192\u0190\x03\x02\x02\x02\u0192\u0193\x03" +
 		"\x02\x02\x02\u0193\u0195\x03\x02\x02\x02\u0194\u0192\x03\x02\x02\x02\u0195" +
-		"\u0196\x05(\x15\x02\u0196\u0197\x07\xA4\x02\x02\u0197\u019B\x05.\x18\x02" +
+		"\u0196\x05(\x15\x02\u0196\u0197\x07\xA0\x02\x02\u0197\u019B\x05.\x18\x02" +
 		"\u0198\u019A\x05&\x14\x02\u0199\u0198\x03\x02\x02\x02\u019A\u019D\x03" +
 		"\x02\x02\x02\u019B\u0199\x03\x02\x02\x02\u019B\u019C\x03\x02\x02\x02\u019C" +
-		"1\x03\x02\x02\x02\u019D\u019B\x03\x02\x02\x02\u019E\u019F\x07\x86\x02" +
-		"\x02\u019F\u01A5\x07\x87\x02\x02\u01A0\u01A1\x050\x19\x02\u01A1\u01A2" +
+		"1\x03\x02\x02\x02\u019D\u019B\x03\x02\x02\x02\u019E\u019F\x07\x82\x02" +
+		"\x02\u019F\u01A5\x07\x83\x02\x02\u01A0\u01A1\x050\x19\x02\u01A1\u01A2" +
 		"\x07\x04\x02\x02\u01A2\u01A4\x03\x02\x02\x02\u01A3\u01A0\x03\x02\x02\x02" +
 		"\u01A4\u01A7\x03\x02\x02\x02\u01A5\u01A3\x03\x02\x02\x02\u01A5\u01A6\x03" +
 		"\x02\x02\x02\u01A6\u01A8\x03\x02\x02\x02\u01A7\u01A5\x03\x02\x02\x02\u01A8" +
-		"\u01A9\x050\x19\x02\u01A93\x03\x02\x02\x02\u01AA\u01AC\x07p\x02\x02\u01AB" +
+		"\u01A9\x050\x19\x02\u01A93\x03\x02\x02\x02\u01AA\u01AC\x07l\x02\x02\u01AB" +
 		"\u01AA\x03\x02\x02\x02\u01AB\u01AC\x03\x02\x02\x02\u01AC\u01AD\x03\x02" +
-		"\x02\x02\u01AD\u01AE\x07q\x02\x02\u01AE\u01B0\x07\xA1\x02\x02\u01AF\u01B1" +
+		"\x02\x02\u01AD\u01AE\x07m\x02\x02\u01AE\u01B0\x07\x9D\x02\x02\u01AF\u01B1" +
 		"\x052\x1A\x02\u01B0\u01AF\x03\x02\x02\x02\u01B0\u01B1\x03\x02\x02\x02" +
-		"\u01B1\u01B2\x03\x02\x02\x02\u01B2\u01B3\x07r\x02\x02\u01B3\u01B4\x05" +
+		"\u01B1\u01B2\x03\x02\x02\x02\u01B2\u01B3\x07n\x02\x02\u01B3\u01B4\x05" +
 		"$\x13\x02\u01B45\x03\x02\x02\x02\u01B5\u01B7\x05\x02\x02\x02\u01B6\u01B5" +
 		"\x03\x02\x02\x02\u01B7\u01BA\x03\x02\x02\x02\u01B8\u01B6\x03\x02\x02\x02" +
 		"\u01B8\u01B9\x03\x02\x02\x02\u01B9\u01BB\x03\x02\x02\x02\u01BA\u01B8\x03" +
 		"\x02\x02\x02\u01BB\u01BC\x07\x02\x02\x03\u01BC7\x03\x02\x02\x02\u01BD" +
-		"\u01C2\x07z\x02\x02\u01BE\u01C2\x05L\'\x02\u01BF\u01C2\x07\x9E\x02\x02" +
-		"\u01C0\u01C2\x07\xA3\x02\x02\u01C1\u01BD\x03\x02\x02\x02\u01C1\u01BE\x03" +
+		"\u01C2\x07v\x02\x02\u01BE\u01C2\x05L\'\x02\u01BF\u01C2\x07\x9A\x02\x02" +
+		"\u01C0\u01C2\x07\x9F\x02\x02\u01C1\u01BD\x03\x02\x02\x02\u01C1\u01BE\x03" +
 		"\x02\x02\x02\u01C1\u01BF\x03\x02\x02\x02\u01C1\u01C0\x03\x02\x02\x02\u01C2" +
-		"9\x03\x02\x02\x02\u01C3\u01C8\x07\xA1\x02\x02\u01C4\u01C5\x07\x0E\x02" +
-		"\x02\u01C5\u01C7\x07\xA1\x02\x02\u01C6\u01C4\x03\x02\x02\x02\u01C7\u01CA" +
+		"9\x03\x02\x02\x02\u01C3\u01C8\x07\x9D\x02\x02\u01C4\u01C5\x07\x0E\x02" +
+		"\x02\u01C5\u01C7\x07\x9D\x02\x02\u01C6\u01C4\x03\x02\x02\x02\u01C7\u01CA" +
 		"\x03\x02\x02\x02\u01C8\u01C6\x03\x02\x02\x02\u01C8\u01C9\x03\x02\x02\x02" +
 		"\u01C9\u01CB\x03\x02\x02\x02\u01CA\u01C8\x03\x02\x02\x02\u01CB\u01CF\x07" +
-		"\xA4\x02\x02\u01CC\u01CE\x07o\x02\x02\u01CD\u01CC\x03\x02\x02\x02\u01CE" +
+		"\xA0\x02\x02\u01CC\u01CE\x07k\x02\x02\u01CD\u01CC\x03\x02\x02\x02\u01CE" +
 		"\u01D1\x03\x02\x02\x02\u01CF\u01CD\x03\x02\x02\x02\u01CF\u01D0\x03\x02" +
 		"\x02\x02\u01D0\u01D2\x03\x02\x02\x02\u01D1\u01CF\x03\x02\x02\x02\u01D2" +
 		"\u01D3\x05> \x02\u01D3;\x03\x02\x02\x02\u01D4\u01E2\x058\x1D\x02\u01D5" +
@@ -3926,65 +3914,65 @@ export class ABAPCDSParser extends Parser {
 		"\u01F6\x03\x02\x02\x02\u01F9\u01FA\x05<\x1F\x02\u01FA\u01FB\x07\x14\x02" +
 		"\x02\u01FB\u01FD\x03\x02\x02\x02\u01FC\u01E3\x03\x02\x02\x02\u01FC\u01E4" +
 		"\x03\x02\x02\x02\u01FC\u01F0\x03\x02\x02\x02\u01FD?\x03\x02\x02\x02\u01FE" +
-		"\u01FF\x07\xA2\x02\x02\u01FF\u0203\x07\xA4\x02\x02\u0200\u0202\x07o\x02" +
+		"\u01FF\x07\x9E\x02\x02\u01FF\u0203\x07\xA0\x02\x02\u0200\u0202\x07k\x02" +
 		"\x02\u0201\u0200\x03\x02\x02\x02\u0202\u0205\x03\x02\x02\x02\u0203\u0201" +
 		"\x03\x02\x02\x02\u0203\u0204\x03\x02\x02\x02\u0204\u0206\x03\x02\x02\x02" +
 		"\u0205\u0203\x03\x02\x02\x02\u0206\u0207\x05> \x02\u0207A\x03\x02\x02" +
-		"\x02\u0208\u0209\x07\xA4\x02\x02\u0209\u020D\x07\xA1\x02\x02\u020A\u020B" +
-		"\x071\x02\x02\u020B\u020D\x07\xA1\x02\x02\u020C\u0208\x03\x02\x02\x02" +
+		"\x02\u0208\u0209\x07\xA0\x02\x02\u0209\u020D\x07\x9D\x02\x02\u020A\u020B" +
+		"\x071\x02\x02\u020B\u020D\x07\x9D\x02\x02\u020C\u0208\x03\x02\x02\x02" +
 		"\u020C\u020A\x03\x02\x02\x02\u020DC\x03\x02\x02\x02\u020E\u020F\t\b\x02" +
 		"\x02\u020FE\x03\x02\x02\x02\u0210\u0211\t\t\x02\x02\u0211G\x03\x02\x02" +
-		"\x02\u0212\u0215\x05b2\x02\u0213\u0215\x07l\x02\x02\u0214\u0212\x03\x02" +
+		"\x02\u0212\u0215\x05b2\x02\u0213\u0215\x07h\x02\x02\u0214\u0212\x03\x02" +
 		"\x02\x02\u0214\u0213\x03\x02\x02\x02\u0215I\x03\x02\x02\x02\u0216\u0217" +
-		"\x05F$\x02\u0217\u0218\x07\x03\x02";
+		"\x05F$\x02\u0217\u0218\x07";
 	private static readonly _serializedATNSegment1: string =
-		"\x02\u0218\u021D\x05H%\x02\u0219\u021A\x07\x04\x02\x02\u021A\u021C\x05" +
-		"H%\x02\u021B\u0219\x03\x02\x02\x02\u021C\u021F\x03\x02\x02\x02\u021D\u021B" +
-		"\x03\x02\x02\x02\u021D\u021E\x03\x02\x02\x02\u021E\u0220\x03\x02\x02\x02" +
-		"\u021F\u021D\x03\x02\x02\x02\u0220\u0221\x07\x05\x02\x02\u0221\u0229\x03" +
-		"\x02\x02\x02\u0222\u0223\x07m\x02\x02\u0223\u0224\x05H%\x02\u0224\u0225" +
-		"\x07r\x02\x02\u0225\u0226\x05*\x16\x02\u0226\u0227\x07\x05\x02\x02\u0227" +
-		"\u0229\x03\x02\x02\x02\u0228\u0216\x03\x02\x02\x02\u0228\u0222\x03\x02" +
-		"\x02\x02\u0229K\x03\x02\x02\x02\u022A\u022D\x07\xA5\x02\x02\u022B\u022D" +
-		"\x05\x16\f\x02\u022C\u022A\x03\x02\x02\x02\u022C\u022B\x03\x02\x02\x02" +
-		"\u022DM\x03\x02\x02\x02\u022E\u022F\x07\x9E\x02\x02\u022FO\x03\x02\x02" +
-		"\x02\u0230\u0233\x05L\'\x02\u0231\u0233\x05N(\x02\u0232\u0230\x03\x02" +
-		"\x02\x02\u0232\u0231\x03\x02\x02\x02\u0233Q\x03\x02\x02\x02\u0234\u0235" +
-		"\t\n\x02\x02\u0235S\x03\x02\x02\x02\u0236\u0239\x05P)\x02\u0237\u0239" +
-		"\x07\xA1\x02\x02\u0238\u0236\x03\x02\x02\x02\u0238\u0237\x03\x02\x02\x02" +
-		"\u0239U\x03\x02\x02\x02\u023A\u023F\x07\xA1\x02\x02\u023B\u023C\x07\x0E" +
-		"\x02\x02\u023C\u023E\x07\xA1\x02\x02\u023D\u023B\x03\x02\x02\x02\u023E" +
-		"\u0241\x03\x02\x02\x02\u023F\u023D\x03\x02\x02\x02\u023F\u0240\x03\x02" +
-		"\x02\x02\u0240W\x03\x02\x02\x02\u0241\u023F\x03\x02\x02\x02\u0242\u0248" +
-		"\x07\xA1\x02\x02\u0243\u0248\x05B\"\x02\u0244\u0248\x05D#\x02\u0245\u0248" +
-		"\x05V,\x02\u0246\u0248\x05J&\x02\u0247\u0242\x03\x02\x02\x02\u0247\u0243" +
-		"\x03\x02\x02\x02\u0247\u0244\x03\x02\x02\x02\u0247\u0245\x03\x02\x02\x02" +
-		"\u0247\u0246\x03\x02\x02\x02\u0248Y\x03\x02\x02\x02\u0249\u024A\x07}\x02" +
-		"\x02\u024A\u024B\x05T+\x02\u024B\u024C\x07~\x02\x02\u024C\u024D\x05R*" +
-		"\x02\u024D[\x03\x02\x02\x02\u024E\u024F\x07\x7F\x02\x02\u024F\u0250\x05" +
-		"R*\x02\u0250]\x03\x02\x02\x02\u0251\u0252\x07|\x02\x02\u0252\u0256\x05" +
-		"X-\x02\u0253\u0255\x05Z.\x02\u0254\u0253\x03\x02\x02\x02\u0255\u0258\x03" +
-		"\x02\x02\x02\u0256\u0254\x03\x02\x02\x02\u0256\u0257\x03\x02\x02\x02\u0257" +
-		"\u025A\x03\x02\x02\x02\u0258\u0256\x03\x02\x02\x02\u0259\u025B\x05\\/" +
-		"\x02\u025A\u0259\x03\x02\x02\x02\u025A\u025B\x03\x02\x02\x02\u025B\u025C" +
-		"\x03\x02\x02\x02\u025C\u025D\x07\x80\x02\x02\u025D_\x03\x02\x02\x02\u025E" +
-		"\u025F\x07\x81\x02\x02\u025F\u0260\x07\x03\x02\x02\u0260\u0261\x05b2\x02" +
-		"\u0261\u0264\x07r\x02\x02\u0262\u0265\x05*\x16\x02\u0263\u0265\x05,\x17" +
-		"\x02\u0264\u0262\x03\x02\x02\x02\u0264\u0263\x03\x02\x02\x02\u0265\u0268" +
-		"\x03\x02\x02\x02\u0266\u0267\x07\x82\x02\x02\u0267\u0269\x07\x83\x02\x02" +
-		"\u0268\u0266\x03\x02\x02\x02\u0268\u0269\x03\x02\x02\x02\u0269\u026A\x03" +
-		"\x02\x02\x02\u026A\u026B\x07\x05\x02\x02\u026Ba\x03\x02\x02\x02\u026C" +
-		"\u0276\x07\xA1\x02\x02\u026D\u0276\x05V,\x02\u026E\u0276\x05B\"\x02\u026F" +
+		"\x03\x02\x02\u0218\u021D\x05H%\x02\u0219\u021A\x07\x04\x02\x02\u021A\u021C" +
+		"\x05H%\x02\u021B\u0219\x03\x02\x02\x02\u021C\u021F\x03\x02\x02\x02\u021D" +
+		"\u021B\x03\x02\x02\x02\u021D\u021E\x03\x02\x02\x02\u021E\u0220\x03\x02" +
+		"\x02\x02\u021F\u021D\x03\x02\x02\x02\u0220\u0221\x07\x05\x02\x02\u0221" +
+		"\u0229\x03\x02\x02\x02\u0222\u0223\x07i\x02\x02\u0223\u0224\x05H%\x02" +
+		"\u0224\u0225\x07n\x02\x02\u0225\u0226\x05*\x16\x02\u0226\u0227\x07\x05" +
+		"\x02\x02\u0227\u0229\x03\x02\x02\x02\u0228\u0216\x03\x02\x02\x02\u0228" +
+		"\u0222\x03\x02\x02\x02\u0229K\x03\x02\x02\x02\u022A\u022D\x07\xA1\x02" +
+		"\x02\u022B\u022D\x05\x16\f\x02\u022C\u022A\x03\x02\x02\x02\u022C\u022B" +
+		"\x03\x02\x02\x02\u022DM\x03\x02\x02\x02\u022E\u022F\x07\x9A\x02\x02\u022F" +
+		"O\x03\x02\x02\x02\u0230\u0233\x05L\'\x02\u0231\u0233\x05N(\x02\u0232\u0230" +
+		"\x03\x02\x02\x02\u0232\u0231\x03\x02\x02\x02\u0233Q\x03\x02\x02\x02\u0234" +
+		"\u0235\t\n\x02\x02\u0235S\x03\x02\x02\x02\u0236\u0239\x05P)\x02\u0237" +
+		"\u0239\x07\x9D\x02\x02\u0238\u0236\x03\x02\x02\x02\u0238\u0237\x03\x02" +
+		"\x02\x02\u0239U\x03\x02\x02\x02\u023A\u023F\x07\x9D\x02\x02\u023B\u023C" +
+		"\x07\x0E\x02\x02\u023C\u023E\x07\x9D\x02\x02\u023D\u023B\x03\x02\x02\x02" +
+		"\u023E\u0241\x03\x02\x02\x02\u023F\u023D\x03\x02\x02\x02\u023F\u0240\x03" +
+		"\x02\x02\x02\u0240W\x03\x02\x02\x02\u0241\u023F\x03\x02\x02\x02\u0242" +
+		"\u0248\x07\x9D\x02\x02\u0243\u0248\x05B\"\x02\u0244\u0248\x05D#\x02\u0245" +
+		"\u0248\x05V,\x02\u0246\u0248\x05J&\x02\u0247\u0242\x03\x02\x02\x02\u0247" +
+		"\u0243\x03\x02\x02\x02\u0247\u0244\x03\x02\x02\x02\u0247\u0245\x03\x02" +
+		"\x02\x02\u0247\u0246\x03\x02\x02\x02\u0248Y\x03\x02\x02\x02\u0249\u024A" +
+		"\x07y\x02\x02\u024A\u024B\x05T+\x02\u024B\u024C\x07z\x02\x02\u024C\u024D" +
+		"\x05R*\x02\u024D[\x03\x02\x02\x02\u024E\u024F\x07{\x02\x02\u024F\u0250" +
+		"\x05R*\x02\u0250]\x03\x02\x02\x02\u0251\u0252\x07x\x02\x02\u0252\u0256" +
+		"\x05X-\x02\u0253\u0255\x05Z.\x02\u0254\u0253\x03\x02\x02\x02\u0255\u0258" +
+		"\x03\x02\x02\x02\u0256\u0254\x03\x02\x02\x02\u0256\u0257\x03\x02\x02\x02" +
+		"\u0257\u025A\x03\x02\x02\x02\u0258\u0256\x03\x02\x02\x02\u0259\u025B\x05" +
+		"\\/\x02\u025A\u0259\x03\x02\x02\x02\u025A\u025B\x03\x02\x02\x02\u025B" +
+		"\u025C\x03\x02\x02\x02\u025C\u025D\x07|\x02\x02\u025D_\x03\x02\x02\x02" +
+		"\u025E\u025F\x07}\x02\x02\u025F\u0260\x07\x03\x02\x02\u0260\u0261\x05" +
+		"b2\x02\u0261\u0264\x07n\x02\x02\u0262\u0265\x05*\x16\x02\u0263\u0265\x05" +
+		",\x17\x02\u0264\u0262\x03\x02\x02\x02\u0264\u0263\x03\x02\x02\x02\u0265" +
+		"\u0268\x03\x02\x02\x02\u0266\u0267\x07~\x02\x02\u0267\u0269\x07\x7F\x02" +
+		"\x02\u0268\u0266\x03\x02\x02\x02\u0268\u0269\x03\x02\x02\x02\u0269\u026A" +
+		"\x03\x02\x02\x02\u026A\u026B\x07\x05\x02\x02\u026Ba\x03\x02\x02\x02\u026C" +
+		"\u0276\x07\x9D\x02\x02\u026D\u0276\x05V,\x02\u026E\u0276\x05B\"\x02\u026F" +
 		"\u0276\x05D#\x02\u0270\u0276\x05J&\x02\u0271\u0276\x05^0\x02\u0272\u0276" +
-		"\x05`1\x02\u0273\u0276\x07\xA5\x02\x02\u0274\u0276\x07\x9E\x02\x02\u0275" +
+		"\x05`1\x02\u0273\u0276\x07\xA1\x02\x02\u0274\u0276\x07\x9A\x02\x02\u0275" +
 		"\u026C\x03\x02\x02\x02\u0275\u026D\x03\x02\x02\x02\u0275\u026E\x03\x02" +
 		"\x02\x02\u0275\u026F\x03\x02\x02\x02\u0275\u0270\x03\x02\x02\x02\u0275" +
 		"\u0271\x03\x02\x02\x02\u0275\u0272\x03\x02\x02\x02\u0275\u0273\x03\x02" +
 		"\x02\x02\u0275\u0274\x03\x02\x02\x02\u0276c\x03\x02\x02\x02\u0277\u0278" +
-		"\x07{\x02\x02\u0278\u0279\x05b2\x02\u0279e\x03\x02\x02\x02\u027A\u027D" +
+		"\x07w\x02\x02\u0278\u0279\x05b2\x02\u0279e\x03\x02\x02\x02\u027A\u027D" +
 		"\x05b2\x02\u027B\u027D\x05d3\x02\u027C\u027A\x03\x02\x02\x02\u027C\u027B" +
 		"\x03\x02\x02\x02\u027Dg\x03\x02\x02\x02\u027E\u0281\x05f4\x02\u027F\u0280" +
-		"\x07r\x02\x02\u0280\u0282\x05\x04\x03\x02\u0281\u027F\x03\x02\x02\x02" +
+		"\x07n\x02\x02\u0280\u0282\x05\x04\x03\x02\u0281\u027F\x03\x02\x02\x02" +
 		"\u0281\u0282\x03\x02\x02\x02\u0282i\x03\x02\x02\x02\u0283\u0285\x05@!" +
 		"\x02\u0284\u0283\x03\x02\x02\x02\u0285\u0288\x03\x02\x02\x02\u0286\u0284" +
 		"\x03\x02\x02\x02\u0286\u0287\x03\x02\x02\x02\u0287\u0289\x03\x02\x02\x02" +
@@ -5374,6 +5362,8 @@ export class Session_variableContext extends ParserRuleContext {
 
 
 export class FuncContext extends ParserRuleContext {
+	public LEFT(): TerminalNode | undefined { return this.tryGetToken(ABAPCDSParser.LEFT, 0); }
+	public RIGHT(): TerminalNode | undefined { return this.tryGetToken(ABAPCDSParser.RIGHT, 0); }
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
