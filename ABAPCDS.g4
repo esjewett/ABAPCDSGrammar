@@ -59,6 +59,11 @@ RIGHT:              'RIGHT' | 'right';
 ONE:                'ONE' | 'one';
 MANY:               'MANY' | 'many';
 CROSS:              'CROSS' | 'cross';
+MAX:                'MAX' | 'max';
+MIN:                'MIN' | 'min';
+AVG:                'AVG' | 'avg';
+SUM:                'SUM' | 'sum';
+COUNT:              'COUNT' | 'count';
 SINGLELINECOMMENT:  ('//' | '--') ~[\r\n]* -> skip;
 MULTILINECOMMENT:   '/*' .*? '*/' -> skip;
 
@@ -188,7 +193,7 @@ association
 
 clauses
     : WHERE cond_expr
-    | GROUPBY path_expr+
+    | GROUPBY path_expr (',' path_expr)+
     | HAVING cond_expr
     | UNION ALL? select_statement
     ;
@@ -394,12 +399,21 @@ cast_expr
     : CAST '(' field AS (dtype | data_element) (PRESERVINGTYPE)? ')'
     ;
 
+aggr_expr
+    : MAX '(' ( ALL | DISTINCT )? field ')'
+    | MIN '(' ( ALL | DISTINCT )? field ')'
+    | AVG '(' ( ALL | DISTINCT )? field (AS dtype)? ')'
+    | SUM '(' ( ALL | DISTINCT )? field ')'
+    | COUNT '(' DISTINCT field ')'
+    | COUNT '(*)'
+    ;
+
 field
     : IDENTIFIER
     | path_expr
     | parameter
     | session_variable
-    // | aggr_expr
+    | aggr_expr
     // | arith_expr
     | builtin_func
     | case_expr
