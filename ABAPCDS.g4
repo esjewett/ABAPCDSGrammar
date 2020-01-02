@@ -250,7 +250,7 @@ parameter_list
     ;
 
 view
-    : DEFINE? VIEW IDENTIFIER /*name_list?*/ parameter_list? AS select_statement
+    : DEFINE? VIEW IDENTIFIER /*name_list?*/ parameter_list? AS select_statement ';'?
     ;
 
 cdsddl
@@ -311,7 +311,10 @@ session_variable
 func
     : 'dats_days_between' | 'DATS_DAYS_BETWEEN'
     | 'tstmp_to_dats' | 'TSTMP_TO_DATS'
+    | 'tstmp_to_tims' | 'TSTMP_TO_TIMS'
+    | 'dats_tims_to_tstmp' | 'DATS_TIMS_TO_TSTMP'
     | 'abap_system_timezone' | 'ABAP_SYSTEM_TIMEZONE'
+    | 'abap_user_timezone' | 'ABAP_USER_TIMEZONE'
     | 'abs' | 'ABS'
     | 'ceil' | 'CEIL'
     | 'div' | 'DIV'
@@ -452,6 +455,7 @@ field
     | session_variable
     | aggr_expr
     | arith_expr
+    | '(' arith_expr ')'
     | builtin_func
     | case_expr
     | cast_expr
