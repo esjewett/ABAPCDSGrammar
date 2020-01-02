@@ -162,6 +162,7 @@ rel_side
     | character_literal
     | numeric_literal
     | parameter
+    | session_variable
     | projection
     ;
 
@@ -367,8 +368,16 @@ case_when_operand
     | IDENTIFIER
     ;
 
+association_attributes
+    : '[' (( numeric_literal | '*' ) ':')? ((INNER | (LEFT OUTER)) WHERE?)? cond_expr? ']'
+    ;
+
+path_association
+    : '.' IDENTIFIER data_source_parameters? association_attributes?
+    ;
+
 path_expr
-    : IDENTIFIER ('.' IDENTIFIER)*
+    : IDENTIFIER? path_association* ('.' IDENTIFIER)?
     ;
 
 case_operand
