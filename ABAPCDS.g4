@@ -175,8 +175,8 @@ rel_expr
 
 cond_expr
     : rel_expr
-    | NOT rel_expr
-    | rel_expr ((AND | OR) cond_expr)+
+    | NOT cond_expr
+    | cond_expr ((AND | OR) cond_expr)+
     | '(' cond_expr ')'
     | '(' cond_expr ((AND | OR) cond_expr)+ ')'
     ;
