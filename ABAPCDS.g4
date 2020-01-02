@@ -268,8 +268,13 @@ annotation_value
     | ENUM
     ;
 
+annotation_identifier
+    : IDENTIFIER
+    | ASSOCIATION
+    ;
+
 subannos
-    : IDENTIFIER ('.' IDENTIFIER)* (ANNOTATIONSEPERATOR annotation_right_side)?
+    : IDENTIFIER ('.' annotation_identifier)* (ANNOTATIONSEPERATOR annotation_right_side)?
     ;
 
 arrelem
