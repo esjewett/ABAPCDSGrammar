@@ -1,7 +1,4 @@
-import { ABAPCDSLexer } from './ABAPCDSLexer';
-import { ABAPCDSParser } from './ABAPCDSParser';
-
-exports = {
-  ABAPCDSLexer,
-  ABAPCDSParser,
-};
+export * from './dist/ABAPCDSLexer';
+export * from './dist/ABAPCDSParser';
+export * from './dist/ABAPCDSListener';
+export * from './dist/ABAPCDSVisitor';

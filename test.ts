@@ -1,7 +1,7 @@
 import { ANTLRInputStream, CommonTokenStream } from 'antlr4ts';
 import { ParseTreeListener, ParseTreeWalker } from 'antlr4ts/tree';
-import { ABAPCDSLexer } from './ABAPCDSLexer';
-import { ABAPCDSParser } from './ABAPCDSParser';
+import { ABAPCDSLexer } from './dist/ABAPCDSLexer';
+import { ABAPCDSParser } from './dist/ABAPCDSParser';
 import { CDSDDLListener } from './src/CDSDDLListener';
 
 import * as fs from 'fs';

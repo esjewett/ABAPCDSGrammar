@@ -1,6 +1,6 @@
 {
   "name": "abapcdsgrammar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Grammar for ABAP CDS",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "npm run clean; npm run antlr4ts; tsc -p ./tsconfig.json",
     "clean": "rm -rdf dist test .antlr",
     "publish": "npm run clean; npm run build",
-    "antlr4ts": "antlr4ts -visitor ./ABAPCDS.g4"
+    "antlr4ts": "antlr4ts -visitor ./ABAPCDS.g4 -o dist"
   },
   "author": "",
   "license": "MIT",

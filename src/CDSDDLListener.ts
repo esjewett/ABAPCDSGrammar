@@ -21,9 +21,9 @@ import {
   Associated_viewContext,
   AliasContext,
   JoinContext,
-} from '../ABAPCDSParser';
+} from '../dist/ABAPCDSParser';
 
-import { ABAPCDSListener } from '../ABAPCDSListener';
+import { ABAPCDSListener } from '../dist/ABAPCDSListener';
 
 import { ParserRuleContext } from 'antlr4ts';
 import { TerminalNode } from 'antlr4ts/tree';
