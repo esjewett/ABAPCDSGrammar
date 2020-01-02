@@ -12,7 +12,7 @@ grammar ABAPCDS;
 //  - Table functions
 
 WS  
-    :   [ \t\r\n]+ -> skip
+    :   [ \t\r\n\u000C\u00a0]+ -> skip
     ;
 
 DEFINE:             'DEFINE' | 'define';
@@ -128,6 +128,7 @@ data_source_parameters
 
 data_source
     : IDENTIFIER data_source_parameters? (AS? alias)? join*
+    | '(' IDENTIFIER data_source_parameters? (AS? alias)? join* ')'
     ;
 
 target
@@ -140,6 +141,7 @@ associated_view
 
 rel_opr
     : '='
+    | '!='
     | '<>'
     | '<'
     | '>'
@@ -193,7 +195,7 @@ association
 
 clauses
     : WHERE cond_expr
-    | GROUPBY path_expr (',' path_expr)+
+    | GROUPBY path_expr (',' path_expr)*
     | HAVING cond_expr
     | UNION ALL? select_statement
     ;
