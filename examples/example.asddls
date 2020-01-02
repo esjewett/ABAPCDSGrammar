@@ -34,6 +34,8 @@ define view /MINDSET/I_ERROR_LOG
       _User[1:Language = $session.system_language].FullName,
 
       Channel,
+      
+      @Semantics.text
       ErrorText,
       ErrorComponent,
       ErrorPackage,

@@ -285,6 +285,7 @@ annotation_right_side
 
 annotation
     :   ANNOTATIONKEY ANNOTATIONSEPERATOR WS* annotation_right_side
+    |   ANNOTATIONKEY  // For boolean annotations it is technically allowed to specify only the key
     ;
 
 parameter
