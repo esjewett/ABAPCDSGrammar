@@ -64,6 +64,7 @@ MIN:                'MIN' | 'min';
 AVG:                'AVG' | 'avg';
 SUM:                'SUM' | 'sum';
 COUNT:              'COUNT' | 'count';
+STAR:               '*';
 SINGLELINECOMMENT:  ('//' | '--') ~[\r\n]* -> skip;
 MULTILINECOMMENT:   '/*' .*? '*/' -> skip;
 
@@ -76,7 +77,7 @@ NUMBER
    ;
 
 fragment INT
-   : '0' | [1-9] [0-9]*
+   : [0-9]+
    ;
 
 IDENTIFIER
@@ -158,6 +159,8 @@ rel_side
     | character_literal
     | numeric_literal
     | parameter
+    | aggr_expr
+    | builtin_func
     | session_variable
     | projection
     ;
@@ -262,6 +265,7 @@ annotation_value
     | character_literal
     | numeric_literal
     | ENUM
+    | NULL
     ;
 
 annotation_identifier
@@ -310,6 +314,7 @@ session_variable
 
 func
     : 'dats_days_between' | 'DATS_DAYS_BETWEEN'
+    | 'dats_add_days' | 'DATS_ADD_DAYS'
     | 'tstmp_to_dats' | 'TSTMP_TO_DATS'
     | 'tstmp_to_tims' | 'TSTMP_TO_TIMS'
     | 'dats_tims_to_tstmp' | 'DATS_TIMS_TO_TSTMP'
@@ -346,9 +351,14 @@ arg
     | '\'NULL\''
     ;
 
+currency_conversion_func
+    : ('currency_conversion' | 'CURRENCY_CONVERSION') '(' (IDENTIFIER '=>' arg) (',' IDENTIFIER '=>' arg)+ ')'
+    ;
+
 builtin_func
     : func '(' arg (',' arg)* ')'
     | 'FLTP_TO_DEC(' arg AS dtype ')'
+    | currency_conversion_func
     ;
 
 character_literal
@@ -381,7 +391,7 @@ case_when_operand
     ;
 
 association_attributes
-    : '[' (( numeric_literal | '*' ) ':')? ((INNER | (LEFT OUTER)) WHERE?)? cond_expr? ']'
+    : '[' (( numeric_literal | STAR ) ':')? ((INNER | (LEFT OUTER)) WHERE?)? cond_expr? ']'
     ;
 
 path_association
@@ -420,6 +430,7 @@ case_expr
 
 cast_expr
     : CAST '(' field AS (dtype | data_element) (PRESERVINGTYPE)? ')'
+    | CAST '((' field ')' AS (dtype | data_element) (PRESERVINGTYPE)? ')'
     ;
 
 aggr_expr
@@ -441,7 +452,8 @@ arith_operand
     ;
 
 arith_clause
-    : ('+' | '-' | '*' | '/') '-'? arith_operand
+    : ('+' | '-' | STAR | '/') '-'? arith_operand
+    | ('+' | '-' | STAR | '/') '-'? '(' arith_operand ')'
     ;
 
 arith_expr
