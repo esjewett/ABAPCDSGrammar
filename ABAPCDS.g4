@@ -373,11 +373,11 @@ association_attributes
     ;
 
 path_association
-    : '.' IDENTIFIER data_source_parameters? association_attributes?
+    : IDENTIFIER data_source_parameters? association_attributes?
     ;
 
 path_expr
-    : IDENTIFIER? path_association* ('.' IDENTIFIER)?
+    : IDENTIFIER? path_association ('.' path_association)* ('.' IDENTIFIER)?
     ;
 
 case_operand

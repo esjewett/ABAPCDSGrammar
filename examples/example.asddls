@@ -31,6 +31,7 @@ define view /MINDSET/I_ERROR_LOG
       Location,
 
       Username._User[1:Language = $session.system_language].FullName,
+      _User[1:Language = $session.system_language].FullName,
 
       Channel,
       ErrorText,
