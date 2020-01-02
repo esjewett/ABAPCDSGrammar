@@ -83,10 +83,6 @@ IDENTIFIER
     :   [a-zA-Z_0-9/]+
     ;
 
-ANNOTATIONKEY
-    :  '@' IDENTIFIER ( '.' IDENTIFIER )*
-    ;
-
 ENUM
     : '#' IDENTIFIER
     ;
@@ -271,10 +267,13 @@ annotation_value
 annotation_identifier
     : IDENTIFIER
     | ASSOCIATION
+    | TO
+    | FILTER
+    | FROM
     ;
 
 subannos
-    : IDENTIFIER ('.' annotation_identifier)* (ANNOTATIONSEPERATOR annotation_right_side)?
+    : annotation_identifier ('.' annotation_identifier)* (ANNOTATIONSEPERATOR annotation_right_side)?
     ;
 
 arrelem
@@ -288,9 +287,13 @@ annotation_right_side
     | '[' (arrelem ',' )* arrelem ']'
     ;
 
+annotation_key
+    : '@' annotation_identifier ('.' annotation_identifier)*
+    ;
+
 annotation
-    :   ANNOTATIONKEY ANNOTATIONSEPERATOR WS* annotation_right_side
-    |   ANNOTATIONKEY  // For boolean annotations it is technically allowed to specify only the key
+    :   annotation_key (ANNOTATIONSEPERATOR WS* annotation_right_side)?
+    // For boolean annotations it is technically allowed to specify only the key
     ;
 
 parameter
