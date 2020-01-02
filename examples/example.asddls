@@ -49,6 +49,10 @@ define view /MINDSET/I_ERROR_LOG
       ConnectionId,
       @DefaultAggregation: #SUM
       ConnectionCount,
+
+      @DefaultAggregation: #AVG
+      RequestSize / ResponseSize as ReqResRatio,
+
       TerminalId,
       RemoteAddress,
       Destination,

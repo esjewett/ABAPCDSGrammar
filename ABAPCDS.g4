@@ -387,7 +387,7 @@ case_operand
     | session_variable
     | path_expr
     | builtin_func
-    // | arith_expr
+    | arith_expr
     ;
 
 when_clause_simple
@@ -420,13 +420,30 @@ aggr_expr
     | COUNT '(*)'
     ;
 
+arith_operand
+    : numeric_literal
+    | IDENTIFIER
+    | path_expr
+    | parameter
+    | builtin_func
+    | cast_expr
+    ;
+
+arith_clause
+    : ('+' | '-' | '*' | '/') '-'? arith_operand
+    ;
+
+arith_expr
+    : '-'? arith_operand arith_clause*
+    ;
+
 field
     : IDENTIFIER
     | path_expr
     | parameter
     | session_variable
     | aggr_expr
-    // | arith_expr
+    | arith_expr
     | builtin_func
     | case_expr
     | cast_expr
