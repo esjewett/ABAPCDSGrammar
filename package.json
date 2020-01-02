@@ -7,7 +7,7 @@
     "test": "npm run antlr4ts; tsc -p ./tsconfig.test.json; node test/test.js",
     "build": "npm run clean; npm run antlr4ts; tsc -p ./tsconfig.json",
     "clean": "rm -rdf dist test .antlr",
-    "publish": "npm run clean; npm run build; npm publish",
+    "publish": "npm run clean; npm run build",
     "antlr4ts": "antlr4ts -visitor ./ABAPCDS.g4"
   },
   "author": "",
