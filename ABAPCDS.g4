@@ -482,6 +482,7 @@ arith_operand
 arith_clause
     : ('+' | '-' | STAR | '/') '-'? arith_operand
     | ('+' | '-' | STAR | '/') '-'? '(' arith_operand ')'
+    | ('+' | '-' | STAR | '/') '-'? '(' arith_expr')'
     ;
 
 arith_expr
