@@ -64,6 +64,9 @@ MIN:                'MIN' | 'min';
 AVG:                'AVG' | 'avg';
 SUM:                'SUM' | 'sum';
 COUNT:              'COUNT' | 'count';
+IMPLEMENTEDBYMETHOD:'IMPLEMENTED BY METHOD' | 'implemented by method';
+TABLEFUNCTION:      'TABLE FUNCTION' | 'table function';
+RETURNS:            'RETURNS' | 'returns';
 STAR:               '*';
 SINGLELINECOMMENT:  ('//' | '--') ~[\r\n]* -> skip;
 MULTILINECOMMENT:   '/*' .*? '*/' -> skip;
@@ -99,6 +102,7 @@ STRING
 statement
     :   annotation
     |   view
+    |   table_function
     ;
 
 alias
@@ -254,6 +258,30 @@ parameter_list
 
 view
     : DEFINE? VIEW IDENTIFIER /*name_list?*/ parameter_list? AS select_statement ';'?
+    ;
+
+amdp_class
+    : IDENTIFIER
+    ;
+
+amdp_method
+    : IDENTIFIER
+    ;
+
+amdp_function
+    : amdp_class '=>' amdp_method
+    ;
+
+table_function_element
+    : annotation* KEY? IDENTIFIER ':' parameter_typing annotation_identifier*
+    ;
+
+element_list
+    : RETURNS '{' (table_function_element ';')+ '}'
+    ;
+
+table_function
+    : DEFINE? TABLEFUNCTION IDENTIFIER parameter_list? element_list IMPLEMENTEDBYMETHOD amdp_function ';'?
     ;
 
 cdsddl
