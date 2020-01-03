@@ -1,6 +1,6 @@
 {
   "name": "abapcdsgrammar",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Grammar for ABAP CDS",
   "main": "index.js",
   "scripts": {
