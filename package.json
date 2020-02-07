@@ -3,10 +3,11 @@
   "version": "0.0.5",
   "description": "Grammar for ABAP CDS",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "npm run antlr4ts; tsc -p ./tsconfig.test.json; node test/test.js",
     "build": "npm run clean; npm run antlr4ts; tsc -p ./tsconfig.json",
-    "clean": "rm -rdf dist test .antlr",
+    "clean": "rm -rdf dist test .antlr index.d.* index.js.*",
     "publish": "npm run clean; npm run build; npm publish",
     "antlr4ts": "antlr4ts -visitor ./ABAPCDS.g4 -o dist"
   },
