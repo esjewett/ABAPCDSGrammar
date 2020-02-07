@@ -5,3 +5,8 @@ test
 *.interp
 *.tokens
 .antlr
+ABAPCDSLexer.ts*
+ABAPCDSListener.ts*
+ABAPCDSParser.ts*
+ABAPCDSVisitor.ts*
+index.ts
