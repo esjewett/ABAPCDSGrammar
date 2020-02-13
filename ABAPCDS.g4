@@ -98,6 +98,56 @@ ANNOTATIONSEPERATOR
 STRING
    : '\'' (~'\'' | '\'\'')* '\''
    ;
+keyword
+    :DEFINE
+    |VIEW
+    |AS
+    |SELECT
+    |FROM
+    |WHERE
+    |GROUPBY
+    |HAVING
+    |UNION
+    |ALL
+    |BOOLEANLITERAL
+    |KEY
+    |CASE
+    |WHEN
+    |THEN
+    |ELSE
+    |END
+    |CAST
+    |DISTINCT
+    |TO
+    |WITH
+    |PARAMETERS
+    |DEFAULT
+    |FILTER
+    |ASSOCIATION
+    |ON
+    |NOT
+    |AND
+    |OR
+    |BETWEEN
+    |LIKE
+    |ESCAPE
+    |IS
+    |NULL
+    |INNER
+    |JOIN
+    |OUTER
+    |LEFT
+    |RIGHT
+    |ONE
+    |MANY
+    |CROSS
+    |MAX
+    |MIN
+    |AVG
+    |SUM
+    |COUNT
+    |RETURNS
+    ;
 
 statement
     :   annotation
@@ -298,10 +348,7 @@ annotation_value
 
 annotation_identifier
     : IDENTIFIER
-    | ASSOCIATION
-    | TO
-    | FILTER
-    | FROM
+    | keyword
     ;
 
 subannos
