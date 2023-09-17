@@ -85,7 +85,7 @@ export class CDSDDLListener implements ABAPCDSListener {
   }
 
   public enterData_source(ctx: Data_sourceContext) {
-    console.log(this.indentString(ctx) + 'Data Source: ' + ctx.IDENTIFIER());
+    console.log(this.indentString(ctx) + 'Data Source: ' + ctx.path_association());
   }
 
   public enterAlias(ctx: AliasContext) {
