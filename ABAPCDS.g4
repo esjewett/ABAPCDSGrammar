@@ -178,8 +178,11 @@ data_source_parameters
     ;
 
 data_source
-    : IDENTIFIER data_source_parameters? (AS? alias)? join*
-    | '(' IDENTIFIER data_source_parameters? (AS? alias)? join* ')'
+    : path_association data_source_path? (AS? alias)? join*
+    | '(' path_association data_source_path? (AS? alias)? join* ')'
+    ;
+data_source_path
+    : ( '.' path_association )+
     ;
 
 target
